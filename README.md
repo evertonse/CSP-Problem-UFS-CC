@@ -6,6 +6,10 @@
 - possuir `javac` e `java` no PATH
 - `git` 
 
+### Primeiramente, clone esse repo. Todos os comandos a seguir em (Opção 1,2,3) devem ser feitos NESTE diretório, onde a repo foi clonada
+
+		$ git clone https://github.com/evertonse/CSP-Problem-UFS-CC.git
+
 ## Opção 1:
 - Rode `compile.py` apenas de dizer compile, ele comipla e roda todo o projeto java
 			
@@ -28,11 +32,11 @@
 
 - Clone a lib AIMA na versão 4 pelo comando abaixo, você deve estar na `directory do projeto`.
 
-		$ git clone --recursive https://github.com/aimacode/aima-java.git --branch AIMA4e `
+		$ git clone --recursive https://github.com/aimacode/aima-java.git --branch AIMA4e
 
 - Opcionalmente Se tiver `git 1.7.10` ou mais:
 
-		$ `git clone --recursive  --single-branch --branch AIMA4e https://github.com/aimacode/aima-java.git`
+		$ git clone --recursive  --single-branch --branch AIMA4e https://github.com/aimacode/aima-java.git
 
 - Agora tente a `Opção 1` e se não funcionar tente `Opção 2` novamente
 

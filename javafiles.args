@@ -204,6 +204,6 @@
 .\aima-core\util\datastructure\Point2D.java
 .\aima-core\util\datastructure\TwoKeyLookup.java
 .\aima-core\util\math\MixedRadixInterval.java
-.\excyber\src\CSPExamples.java
-.\excyber\src\JobshopSchedulingCSP.java
-.\excyber\src\Main.java
+.\ufs-cc\src\CSPExamples.java
+.\ufs-cc\src\JobshopSchedulingCSP.java
+.\ufs-cc\src\Main.java
