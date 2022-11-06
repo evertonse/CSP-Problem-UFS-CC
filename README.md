@@ -1,12 +1,13 @@
 
 # Como Compilar e Rodar
 
-### Requisitos, obs: todos os programas abaixo devem estar configurados no PATH
+## Requisitos
+##### todos os programas abaixo devem estar configurados no PATH
 - `python 3`
 - possuir `javac` e `java` no PATH
 - `git` 
 
-### Primeiramente
+## Primeiramente
 -	Clone esse repo. Todos os comandos a seguir em (Opção 1,2,3) devem ser feitos NESTE diretório, onde a repo foi clonada.
 
 		$ git clone https://github.com/evertonse/CSP-Problem-UFS-CC.git
