@@ -6,7 +6,8 @@
 - possuir `javac` e `java` no PATH
 - `git` 
 
-### Primeiramente, clone esse repo. Todos os comandos a seguir em (Opção 1,2,3) devem ser feitos NESTE diretório, onde a repo foi clonada
+### Primeiramente
+-	Clone esse repo. Todos os comandos a seguir em (Opção 1,2,3) devem ser feitos NESTE diretório, onde a repo foi clonada.
 
 		$ git clone https://github.com/evertonse/CSP-Problem-UFS-CC.git
 
