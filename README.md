@@ -12,12 +12,12 @@
 
 		$ git clone https://github.com/evertonse/CSP-Problem-UFS-CC.git
 
-## Opção 1:
+## Compilar: Opção 1:
 - Rode `compile.py` apenas de dizer compile, ele comipla e roda todo o projeto java
 			
 		$ compile.py
 
-## Opção 2:
+## Compilar: Opção 2:
 - Rode o comando abaixo para compilar:
 
 		$ javac -classpath "./build/" -sourcepath "./" -d "./build/" @javafiles.args
@@ -30,7 +30,7 @@
 	
 		$ java -cp "./build/" Main
 
-## Opção 3 (caso esteja faltando o código do AIMA):
+## Compilar: Opção 3 (caso esteja faltando o código do AIMA):
 
 - Clone a lib AIMA na versão 4 pelo comando abaixo, você deve estar na `directory do projeto`.
 
