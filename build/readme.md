@@ -1,0 +1,1 @@
+## Build folder é para `.class` files
