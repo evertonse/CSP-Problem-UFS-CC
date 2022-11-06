@@ -3,8 +3,8 @@ from glob import glob
 
 EXCLUDE_FOLDERS :set = {'extra','gradle','test','gui'}
 
-javafiles :list = [y for x in os.walk(".\\") for y in glob(os.path.join(x[0], '*.java'))]
-jarfiles  :list = [y for x in os.walk(".\\") for y in glob(os.path.join(x[0], '*.jar'))]
+javafiles :list = [y.replace('\\','/') for x in os.walk("./") for y in glob(os.path.join(x[0], '*.java'))]
+jarfiles  :list = [y.replace('\\','/') for x in os.walk("./") for y in glob(os.path.join(x[0], '*.jar'))]
 
 classpath    :str = "./build/" 
 argsfilename :str	= "javafiles.args"
@@ -16,7 +16,7 @@ with open( argsfilename, 'w+' ) as f:
 	for j in sorted(javafiles):
 		if any([j.count(e) > 0 for e in EXCLUDE_FOLDERS]):
 			continue
-		f.write(f"{j}\n")
+		f.write(f"{j} \n")
 
 cmd_compile :str = f'javac -classpath {classpath} -sourcepath "./" -d "{classpath}" ' + f"@{argsfilename}"
 print(cmd_compile)

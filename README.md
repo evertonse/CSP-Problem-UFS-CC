@@ -7,13 +7,19 @@
 - possuir `javac` e `java` no PATH
 - `git` 
 
+##### Para obter os requisitos no Linux:
+		
+		$ sudo apt update && sudo apt upgrade
+		$ sudo apt-get install default-jdk python3 git
+
+
 ## Primeiramente
 -	Clone esse repo. Todos os comandos a seguir em (Opção 1,2,3) devem ser feitos NESTE diretório, onde a repo foi clonada.
 
 		$ git clone https://github.com/evertonse/CSP-Problem-UFS-CC.git
 
 ## Compilar: Opção 1:
-- Rode `compile.py` apenas de dizer compile, ele comipla e roda todo o projeto java
+- Rode `./compile.py` apenas de dizer compile, ele comipla e roda todo o projeto java
 			
 		$ compile.py
 
