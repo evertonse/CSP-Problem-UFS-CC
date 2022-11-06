@@ -3,11 +3,11 @@ from glob import glob
 
 EXCLUDE_FOLDERS :set = {'extra','gradle','test','gui'}
 
-javafiles 	 :list = [y for x in os.walk(".\\") for y in glob(os.path.join(x[0], '*.java'))]
-jarfiles 	 	 :list = [y for x in os.walk(".\\") for y in glob(os.path.join(x[0], '*.jar'))]
+javafiles :list = [y for x in os.walk(".\\") for y in glob(os.path.join(x[0], '*.java'))]
+jarfiles  :list = [y for x in os.walk(".\\") for y in glob(os.path.join(x[0], '*.jar'))]
 
-classpath 	 :str  = "./build/" 
-argsfilename :str	 = "javafiles.args"
+classpath    :str = "./build/" 
+argsfilename :str	= "javafiles.args"
 
 # Adiciona a lista de arquivos para compilar
 # apenas se o path do arquivo não contem os folders 
@@ -18,15 +18,13 @@ with open( argsfilename, 'w+' ) as f:
 			continue
 		f.write(f"{j}\n")
 
-cmd_compile :str 	= f'javac -classpath {classpath} -sourcepath "./" -d "{classpath}" ' + f"@{argsfilename}"
+cmd_compile :str = f'javac -classpath {classpath} -sourcepath "./" -d "{classpath}" ' + f"@{argsfilename}"
 print(cmd_compile)
 code:int = os.system(cmd_compile)
 
-
-cmd_run 		:str	= f'java -cp "{classpath}" Main'
+cmd_run     :str = f'java -cp "{classpath}" Main'
 print(cmd_run)
 code:int = os.system(cmd_run)	
-
 
 """
 # Opcional compilar em um comando só:
