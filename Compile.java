@@ -13,13 +13,14 @@ public class Compile {
 	
 	static Set<String> EXCLUDE_FOLDERS = new HashSet<>(Arrays.asList("extra","gradle","test","gui")); 
 	static String root_path 	 = "./";
-	static String classpath    = "\"./build/\""; 
+	static String classpath    = "./build/"; 
 	static String argsfilename = "javafiles.args";
 
 	static String cmd_compile  = 
-		"javac -classpath " + 
-		Compile.classpath + 
-		" -sourcepath " + root_path  + " -d " + Compile.classpath + " @" + argsfilename;
+		"javac -cp " +  Compile.classpath + 
+		" -sourcepath " + root_path  + 
+		" -d " + Compile.classpath + 
+		" @" + argsfilename;
 	static String cmd_run 		 = "java -cp " + Compile.classpath + " Main";
 
 	static ArrayList<String> javafiles = new ArrayList<String>(25);
