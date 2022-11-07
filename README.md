@@ -7,21 +7,37 @@
 - possuir `javac` e `java` no PATH
 - `git` 
 
-##### Para obter os requisitos no Linux:
+#### Ubuntu Linux:
 		
 		$ sudo apt update && sudo apt upgrade
 		$ sudo apt-get install default-jdk python3 git
 
+#### Manjaro Linux (usando pacman):
+- Update pacman
+
+		$ sudo pacman -Syu
+
+- JDK pode ser instalado com o comando
+
+		$ sudo pacman -S jre8-openjdk-headless jre8-openjdk jdk8-openjdk openjdk8-doc openjdk8-src
+
+- Python para compilar os arquivos java
+		
+		$ sudo pacman -S python3
+		$ sudo pacman -S git
 
 ## Primeiramente
--	Clone esse repo. Todos os comandos a seguir em (Opção 1,2,3) devem ser feitos NESTE diretório, onde a repo foi clonada.
+-	Clone esse repo e vá para o diretório clonado. Todos os comandos a seguir em (Opção 1,2,3) devem ser feitos NESTE diretório, onde a repo foi clonada.
 
 		$ git clone https://github.com/evertonse/CSP-Problem-UFS-CC.git
+		$ cd ./CSP-Problem-UFS-CC
 
 ## Compilar: Opção 1:
 - Rode `./compile.py` apenas de dizer compile, ele comipla e roda todo o projeto java
 			
-		$ compile.py
+		$ python3 compile.py
+
+- Se tiver no Windows basta dar double-click em `compile.py`
 
 ## Compilar: Opção 2:
 - Rode o comando abaixo para compilar:
