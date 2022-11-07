@@ -3,7 +3,7 @@
 
 ## Requisitos
 - `python 3`
-- possuir `javac` e `java` no PATH
+- `javac` e `java`, versão Java 8.
 - `git`
 
 #### **Observação**: Todos os programas acima devem estar configurados no `PATH`
