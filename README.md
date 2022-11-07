@@ -35,7 +35,7 @@
 		$ sudo pacman -S git
 
 ## Primeiramente
--	Clone esse repo e vá para o diretório clonado. Todos os comandos a seguir em (Opção 1,2,3 e 4) devem ser feitos **dentro do diretório onde a repo foi clonada**.
+-	Clone esse repo em um diretório que **NÃO possua caracteres especiais** (acentos, emojis, coisas assim) e vá para o diretório clonado. Todos os comandos a seguir em (Opção 1,2,3 e 4) devem ser feitos **dentro do diretório onde a repo foi clonada**.
 
 		$ git clone https://github.com/evertonse/CSP-Problem-UFS-CC.git
 		$ cd ./CSP-Problem-UFS-CC
