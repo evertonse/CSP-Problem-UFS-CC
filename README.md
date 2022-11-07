@@ -40,14 +40,14 @@
 		$ git clone https://github.com/evertonse/CSP-Problem-UFS-CC.git
 		$ cd ./CSP-Problem-UFS-CC
 
-## Compilar : Opção 1 - Usar python para compilar e rodar:
+## Compilar : Opção 1 - Usar python para *compilar* e *rodar*:
 - Rode `./compile.py` que irá compilar e rodar todo o projeto.
 			
 		$ python3 compile.py
 
 - Se tiver no Windows basta dar double-click em `compile.py`
 
-## Compilar: Opção 2 - Usar um programa java para apenas compilar:
+## Compilar: Opção 2 - Usar um programa java para apenas *compilar*:
 - Rode o comando abaixo para compilar um programa em java que é responsável a compilar o projeto:
 
 		$ javac Compile.java
@@ -61,7 +61,7 @@
 		$ java -cp "./build/" Main
 		
 ## Compilar: Opção 3 - Manualmente:
-- Rode o comando abaixo para compilar:
+- Rode o comando abaixo para *compilar*:
 
 		$ javac -classpath "./build/" -sourcepath "./" -d "./build/" @javafiles.args
 
