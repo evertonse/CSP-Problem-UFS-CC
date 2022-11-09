@@ -1,8 +1,11 @@
+package cc;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
+
 
 public class Disciplina {
     static private String path_todas_disciplinas = "";
@@ -16,7 +19,8 @@ public class Disciplina {
     String departametno, area_de_formacao;
     //Perfil de Inteligência Artificial
     String perfil;
-    boolean opcional;
+    boolean optional;
+
     public Disciplina(
         String code,  String name,
         int carga_horaria_pratica, int carga_horaria_teorica,
@@ -26,7 +30,7 @@ public class Disciplina {
         this.carga_horaria = carga_horaria_pratica +  carga_horaria_teorica;
         this.carga_horaria_teorica = carga_horaria_teorica;
         this.carga_horaria_pratica = carga_horaria_pratica;
-        this.opcional = opcional;
+        this.optional = optional;
     }
 
     public List<Disciplina> loadAll() {

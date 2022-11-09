@@ -1,3 +1,5 @@
+package cc;
+
 public class Turma {
     Disciplina disc;
     Horario comeco,fim;
