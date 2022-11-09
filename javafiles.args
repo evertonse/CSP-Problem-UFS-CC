@@ -1,3 +1,4 @@
+./Compile.java 
 ./aima-core/Probability/BeliefState.java 
 ./aima-core/Probability/CategoricalDistribution.java 
 ./aima-core/Probability/Domain/Domain.java 
