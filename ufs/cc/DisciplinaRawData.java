@@ -1,4 +1,5 @@
-package cc;
+package ufs.cc;
+
 
 public class  DisciplinaRawData {
 	

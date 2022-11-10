@@ -1,4 +1,4 @@
-package cc;
+package ufs.cc;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,8 +10,6 @@ import java.util.ArrayList;
 
 import java.util.Map;
 import java.util.HashMap;
-
-import cc.DisciplinaRawData;
 
 public class Disciplina {
 	enum Perfil { 
@@ -127,6 +125,7 @@ public class Disciplina {
 				disc.addPreReq(pr.replace("(PRO)", ""));
 			}
 		}
+		Disciplina.code_to_disc.put(disc.code, disc);
 		return disc;
 	}
 
@@ -144,8 +143,12 @@ public class Disciplina {
 		this.pre_req_codes.add(code);
 	}
 
+	static public Disciplina disciplinaFromCode(String code) {
+		return Disciplina.code_to_disc.get(code);
+	}
+
 	@Override
 	public String toString() {
-		return String.format("%-10s %1s %-3s %1s %s", this.code,"", Integer.toString(this.getCargaHoraria()),"", this.name);
+		return String.format("%-10s %1s %-3s %1s %-60s", this.code,"", Integer.toString(this.getCargaHoraria()),"", this.name);
 	}
 }

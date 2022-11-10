@@ -1,4 +1,4 @@
-package cc;
+package ufs;
 
 public class TurmasCSP {
 	

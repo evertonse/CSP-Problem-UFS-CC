@@ -1,6 +1,7 @@
 import aima.core.search.basic.uninformed.GraphSearch;
 import cc.Disciplina;
 import cc.Horario;
+import cc.Turma;
 
 import java.util.List;
 import java.util.Random;
@@ -26,6 +27,10 @@ public class Main {
 				Horario horario = new Horario(turno,dia,hora);
 				System.out.println(horario);
 				
+			}
+			
+			for(Turma t: Turma.getOfertas(10,1)) {
+				System.out.println(t);
 			}
 			new Scanner(System.in).nextLine();
     }

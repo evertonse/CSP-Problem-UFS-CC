@@ -21,10 +21,10 @@ public class Horario {
 		public Horario(Turno turno, Dia dia, int horario){
 			this.turno = turno;
       this.dia = dia;
-			if (turno == Turno.Noturno && hora > 2) {
+			if (turno == Turno.Noturno && hora > 1) {
 				throw new IllegalArgumentException("Turno Noturno só possue horario 1 e 2");
 			}
-			if (hora > 3){
+			if (hora > 2){
 				throw new IllegalArgumentException("Horario deve ser entre 1 e 3");
 			}
       this.hora = horario;
@@ -32,35 +32,35 @@ public class Horario {
 		public Horario(int turno, int dia, int horario) {
 			this.turno = Turno.values()[turno];
       this.dia = Dia.values()[dia];
-			if (this.turno == Turno.Noturno && hora > 2) {
-				throw new IllegalArgumentException("Turno Noturno só possue horario 1 e 2");
+			if (this.turno == Turno.Noturno && hora > 1) {
+				throw new IllegalArgumentException("Turno Noturno só possue horario 0 e 1");
 			}
-			if (hora > 3){
-				throw new IllegalArgumentException("Horario deve ser entre 1 e 3");
+			if (hora > 2){
+				throw new IllegalArgumentException("Horario deve ser entre 0 e 2");
 			}
       this.hora = horario;
 		}
 
 		@Override
 		public String toString() {
-			int start_h = 0,start_min = 0, end_h = 0,end_min = 0;
+			int start_h = + 2*this.hora,start_min = 0, end_h = 0,end_min = 0;
 			switch (this.turno) {
 				case Noturno:
-          start_h = 18;
+          start_h += 18;
           start_min = 50;
           break;
 				case Vespestino:
-					start_h = 13;
-          start_min = 0;
+					start_h += 13;
+          start_min = 0 ;
 					break;
 				case Matunino:
-					start_h = 7;
+					start_h += 7;
           start_min = 0;
 					break;
 			}
-			end_h =start_h + 2; end_min = start_min;
+			end_h =start_h + 1; end_min = 50;
 			if(this.turno == Turno.Noturno){
-				end_h =start_h + 3; end_min = 30;
+				end_h =start_h + 2; end_min = 30;
 
 			}
 			String start_horario = String.format(
@@ -89,7 +89,11 @@ public class Horario {
 			case Sex:
 				return "Sex";
 			default:
-				return "Invalid Dia";
+				return "Dia Invalido";
 		}	
+	}
+	@Override
+	public boolean equals(Object obj) {
+		return super.equals(obj);
 	}
 }
