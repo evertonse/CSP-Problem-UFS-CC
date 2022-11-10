@@ -1,6 +1,5 @@
-package cc;
+package ufs.cc;
 
-import java.security.cert.TrustAnchor;
 import java.util.Random;
 
 public class Turma {

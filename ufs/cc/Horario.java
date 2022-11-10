@@ -1,4 +1,4 @@
-package cc;
+package ufs.cc;
 
 public class Horario {
 		enum Dia {
