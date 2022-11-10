@@ -22,9 +22,10 @@ cmd_compile :str = f'javac -classpath {classpath} -sourcepath "./" -d "{classpat
 print(cmd_compile)
 code:int = os.system(cmd_compile)
 
-cmd_run     :str = f'java -cp "{classpath}" Main'
-print(cmd_run)
-code:int = os.system(cmd_run)	
+if (code == 0):
+	cmd_run     :str = f'java -cp "{classpath}" Main'
+	print(cmd_run)
+	code:int = os.system(cmd_run)	
 
 """
 # Opcional compilar em um comando só:
