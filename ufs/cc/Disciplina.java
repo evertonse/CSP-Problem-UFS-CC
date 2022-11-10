@@ -144,6 +144,6 @@ public class Disciplina {
 
 	@Override
 	public String toString() {
-		return String.format("%-10s %1s %-3s %1s %-60s", this.code,"", Integer.toString(this.getCargaHoraria()),"", this.name);
+		return String.format("%-10s %1s %-3s %1s %-50s", this.code,"", Integer.toString(this.getCargaHoraria()),"", this.name);
 	}
 }

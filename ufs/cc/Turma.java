@@ -19,7 +19,18 @@ public class Turma {
 	getOfertas(int n_turmas, int turno) {
 		Random rd = new Random();
 		Turma[] turmas = new Turma[n_turmas];
-		String[] professores = new String[]{"Leonardo", "Evilson", "Estombelo", "Rafael"};
+		String[] professores = new String[]{
+			"Leonardo Nogueira", 
+			"Evilson", 
+			"Estombelo", 
+			"Rafael",
+			"Alberto Costa",
+			"Beatriz Trinchao",
+			"Bruno Otavio",
+			"Tarcisio Rocha",
+			"Rene Pereira"
+		};
+
 		Disciplina[] disciplinas = Disciplina.getAll().toArray(new Disciplina[ Disciplina.getAll().size()]);
 		
 		for (int i = 0; i < n_turmas; i++) {
@@ -69,9 +80,8 @@ public class Turma {
 				horarios[4] = new Horario(turno, 4, hora);
 			}
 			else {
-				turmas[i] = turmas[i-1];
-				continue;
-				//throw new UnsupportedOperationException("Não pensei sobre esse caso Ainda");
+				// turmas[i] = turmas[i-1]; continue;
+				throw new UnsupportedOperationException("Não pensei sobre esse caso Ainda");
 			} 
 
 			turmas[i] = new Turma(disciplinas[disc],horarios, professores[prof]);

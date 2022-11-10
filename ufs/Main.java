@@ -1,7 +1,7 @@
 import aima.core.search.basic.uninformed.GraphSearch;
-import cc.Disciplina;
-import cc.Horario;
-import cc.Turma;
+import ufs.cc.Disciplina;
+import ufs.cc.Horario;
+import ufs.cc.Turma;
 
 import java.util.List;
 import java.util.Random;
