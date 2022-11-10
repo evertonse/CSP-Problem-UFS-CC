@@ -1,0 +1,8 @@
+{
+	"java.project.sourcePaths": [
+		"aima-core",
+		".",
+		"ufs-cc\\src",
+		"ufs-cc\\src\\cc"
+	]
+}
