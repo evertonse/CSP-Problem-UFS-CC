@@ -1,3 +1,5 @@
+package ufs;
+
 public class Debug {
 	static public boolean DEBUG = true;
 

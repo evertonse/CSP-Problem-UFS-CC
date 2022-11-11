@@ -92,8 +92,16 @@ public class Horario {
 				return "Dia Invalido";
 		}	
 	}
+
 	@Override
 	public boolean equals(Object obj) {
-		return super.equals(obj);
+		if( 
+				 ((Horario)obj).dia 	== this.dia 
+			&& ((Horario)obj).turno == this.turno
+			&& ((Horario)obj).hora 	== this.hora
+		) {
+			return true;
+		}
+		return false;
 	}
 }

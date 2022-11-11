@@ -1,3 +1,5 @@
+package ufs;
+
 //package csp;
 //package excyber;
 import aima.core.environment.support.CSPFactory;

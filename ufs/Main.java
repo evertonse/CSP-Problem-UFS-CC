@@ -1,3 +1,5 @@
+package ufs;
+
 import aima.core.search.basic.uninformed.GraphSearch;
 import ufs.cc.Disciplina;
 import ufs.cc.Horario;
@@ -32,6 +34,9 @@ public class Main {
 			for(Turma t: Turma.getOfertas(10,1)) {
 				System.out.println(t);
 			}
+			
+			TurmasCSP.run();
+
 			new Scanner(System.in).nextLine();
     }
 }

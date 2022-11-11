@@ -89,6 +89,22 @@ public class Turma {
 		return turmas;
 	}
 
+	public boolean conflita(Turma t2) {
+		if (t2 == null) {
+      return false;
+    }
+		
+		for (Horario horario : this.horarios) {
+			for (Horario horario2 : t2.horarios) {
+				// se pelo menos 1 horario conflitar então as duas turmas conflitam
+				if (horario.equals(horario2)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();

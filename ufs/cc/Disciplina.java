@@ -48,6 +48,10 @@ public class Disciplina {
 		
 		Disciplina.code_to_disc.put(this.code, this);
 	}
+	
+	public Disciplina(String code) {	
+		Disciplina.code_to_disc.put(this.code, this);
+	}
 
 	static public List<Disciplina> getAll() {
 		if (all_disciplinas !=  null) 
