@@ -205,8 +205,6 @@
 ./aima/core/util/datastructure/Point2D.java 
 ./aima/core/util/datastructure/TwoKeyLookup.java 
 ./aima/core/util/math/MixedRadixInterval.java 
-./ufs/CSPExamples.java 
-./ufs/Debug.java 
 ./ufs/JobshopSchedulingCSP.java 
 ./ufs/Main.java 
 ./ufs/TurmasCSP.java 

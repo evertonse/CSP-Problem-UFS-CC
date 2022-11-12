@@ -29,13 +29,13 @@ public class Turma {
 	static public Turma[] 
 	getOfertas(int n_turmas, Horario.Turno turno) {
 		if (turno == Horario.Turno.Matunino) {
-			return getOfertas(n_turmas, 1);
+			return getOfertas(n_turmas, 0);
 		}
 		if (turno == Horario.Turno.Vespestino) {
-			return getOfertas(n_turmas, 2);
+			return getOfertas(n_turmas, 1);
 		}
 		else{
-			return getOfertas(n_turmas, 3);
+			return getOfertas(n_turmas, 2);
 		}
 	}
 
@@ -72,7 +72,7 @@ public class Turma {
 				horarios = new Horario[1];
 				horarios[0] = new Horario(turno, dia,hora);
 			}
-			// Deve ser ou seg-qua. ou ter-qui
+			// Deve ser ou seg-qua. ou ter-qui ou tudo na sex.
 			else if (cr == 4) { 
 				horarios = new Horario[2];
 				
@@ -105,12 +105,11 @@ public class Turma {
 			}
 			// Deve segunda-qua-sex
 			else if (cr == 12) { 
-				horarios = new Horario[5];
-				horarios[0] = new Horario(turno, 0, hora);
-				horarios[1] = new Horario(turno, 1, hora);
-				horarios[2] = new Horario(turno, 2, hora);
-				horarios[3] = new Horario(turno, 3, hora);
-				horarios[4] = new Horario(turno, 4, hora);
+				horarios = new Horario[2];
+				int dia = rd.nextInt(0,4);
+				
+				horarios[0] = new Horario(turno, dia, hora);
+				horarios[1] = new Horario(turno, dia+1, hora);
 			}
 			else {
 				i = i-1;
@@ -146,8 +145,12 @@ public class Turma {
 			return false;
 		}
 		
+		if(this.getDisciplina().getCode().equals(t2.getDisciplina().getCode())){
+			return true;
+		}
+
 		Horario[] h1 = this.getHorarios();
-		Horario[] h2 = this.getHorarios();
+		Horario[] h2 = t2.getHorarios();
 
 		if (h1 == null){
 			System.out.println("h1 is null");

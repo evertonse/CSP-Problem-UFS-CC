@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import aima.core.search.api.Assignment;
+import aima.core.search.api.Domain;
 import aima.core.search.api.CSP;
 import aima.core.search.api.Constraint;
 import aima.core.search.basic.csp.AC3;
@@ -53,12 +54,12 @@ public static void run() {
 	Constraint[] restrictions = getConstraints(variables,e);
 
 	CSP csp = new BasicCSP( variables, domains, restrictions);
-	//printCSP(csp);
+	printCSP(csp);
 	AC3 ac3 = new AC3();
 	ac3.test(csp);
 
-	System.out.println("Após aplicas AC3.test()--------------------------------------------------------------------");
-	//printCSP(csp );
+	System.out.println("Após aplicas AC3.test()");
+	printCSP(csp);
 	System.out.println("=====================================================================");
 	
 	BacktrackingSearch search = new BacktrackingSearch();
@@ -67,11 +68,12 @@ public static void run() {
 	System.out.println("\nApós aplicar BacktrackingSearch.apply(csp)");
 	
 	if(assignment == null) {
-		System.out.println("assignment = " + assignment);
-		System.out.println("Não foi possivel encontrar atribuições completa e consistente");
-
+		System.out.println("Assignment = " + assignment);
+		System.out.println("Nao foi possivel encontrar atribuicao completa e consistente");
+		return;
 	}
-	System.out.println("Solução ? : " + (assignment.isSolution(csp) ? "True": "False"));
+
+	System.out.println("É Solução ? : " + (assignment.isSolution(csp) ? "Sim" : "Não"));
 	//printCSP(csp);
 	
 	Map<String,Object> assignment_map = assignment.getAssignments();
@@ -86,17 +88,7 @@ static public Object[][] getDomains(int variables_length,int n_turmas, Estudante
 	
 	Turma[] all_turmas = Turma.getOfertas(n_turmas,e.turno); // 25 turmas no horario 1 (vespertino)
 	
-	System.out.println(">> Turmas Ofertadas:");
-	for(Turma t: all_turmas) {
-		System.out.println(t);
-	}
-	System.out.println("<<\n");
-	
-	System.out.println(">> Disciplinas Cursadas pelo estudante:");
-	for(Disciplina d: e.getDisciplinasCursadas()) {
-		System.out.println(d);
-	}
-	System.out.println("<<\n");
+
 	// Cada dominio indica são as possiveis turmas que podem ser associadas a uma escolha de turma
 	Disciplina[] cursadas = e.getDisciplinasCursadas();
 
@@ -124,6 +116,18 @@ static public Object[][] getDomains(int variables_length,int n_turmas, Estudante
 	for (int i = 0; i < variables_length; i++) {
 		domains[i] = turmas_restringidas.toArray().clone();
 	}
+	
+	System.out.println(">> Turmas Ofertadas:");
+	for(Turma t: turmas_restringidas) {
+		System.out.println(t);
+	}
+	System.out.println("<<\n");
+	
+	System.out.println(">> Disciplinas Cursadas pelo estudante:");
+	for(Disciplina d: e.getDisciplinasCursadas()) {
+		System.out.println(d);
+	}
+	System.out.println("<<\n");
 	return domains;
 	
 }
@@ -139,20 +143,6 @@ static public String[] getVariables(int n_turmas){
 
 static public Constraint[] getConstraints(String[] variables, Estudante estudante){
 	List<Constraint> restrictions = new ArrayList<>(25);
-	// each constraint is indexed, that means that vals[i] is
-	// the value currently assigned to variables[i], i think ...
-	for (int i = 0; i < variables.length; i++) {
-		for (int j = 0; j < variables.length; j++) {
-			if (i == j)
-				continue;
-			
-			restrictions.add(
-				new BasicConstraint(
-					new String[]{variables[i], variables[j]},
-					vals -> ((Turma) vals[0]).conflita(((Turma)vals[1])) == false)
-			);
-		}
-	}
 
 	Constraint min_max_carga_horario = new BasicConstraint(
 		variables,
@@ -161,8 +151,9 @@ static public Constraint[] getConstraints(String[] variables, Estudante estudant
 			
 			for (Object val : vals) {
 				sum += ((Turma) val).getDisciplina().getCargaHoraria();
+				System.out.println(((Turma) val));
 			}
-
+			
 			System.out.println("sum de " + vals.length + " ch = " + sum);
 			if (sum >= 240 && sum <= 480){
 				return true;
@@ -173,27 +164,46 @@ static public Constraint[] getConstraints(String[] variables, Estudante estudant
 
 		}
 	);
-	restrictions.add(min_max_carga_horario);
 
-	System.out.println("min_max_carga_horario.isBinary() = " + min_max_carga_horario.isBinary());
-/* 
+	restrictions.add(min_max_carga_horario);
+	
+	// each constraint is indexed, that means that vals[i] is
+	// the value currently assigned to variables[i], i think ...
 	for (int i = 0; i < variables.length; i++) {
-		for (Disciplina e_disc : estudante.getDisciplinasCursadas()) {
+		for (int j = 0; j < variables.length; j++) {
+			if (i == j)
+				continue;
+			
 			restrictions.add(
 				new BasicConstraint(
-					new String[]{variables[i]},
-					vals -> ((Turma) vals[0]).getDisciplina().equals(e_disc) == false)
+					new String[]{variables[i], variables[j]},
+					vals -> {
+						Turma t1 = (Turma) vals[0];
+						Turma t2 = (Turma) vals[1];
+
+						boolean conflict = t1.conflita(t2);
+						// Só permitimos se NÂO der conflito
+						return conflict == false;
+					}
+				)
 			);
 		}
 	}
-*/
+
 	return restrictions.toArray(new Constraint[restrictions.size()]);
 }
 
 static public void printCSP(CSP csp) {
-
+	
+	System.out.println("\n---------------------------------------------------------------------");
 	System.out.println( "Variaveis : " + csp.getVariables() );
-	System.out.println( "Dominios[0] : " + csp.getDomains().get(0) );
+	System.out.println( "|Dominios| = " + csp.getDomains().size() );
+	int index = 0;
+	for (Domain d : csp.getDomains()) {
+		System.out.println( "|Dominios[" + String.valueOf(index) + "]| = " + d.size() );
+		index += 1;
+	}
+
 	System.out.print( "Tuplas da Relacao de Restricao = {");
 	for (Constraint constraint : csp.getConstraints()) {
 		System.out.print( "(");
@@ -204,8 +214,7 @@ static public void printCSP(CSP csp) {
 	}
 	System.out.println( " }");
 
-	System.out.println( "Restricoes : " + csp.getConstraints());
-	System.out.println( "RestricaoBinaria: " + csp.getConstraints().get(0).isBinary() );
+	System.out.println( "|Restricoes| = " + csp.getConstraints().size());
 	System.out.println("---------------------------------------------------------------------");
 }
 

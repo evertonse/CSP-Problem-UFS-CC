@@ -9,8 +9,8 @@ public class Horario {
       Sex,
 		}
 		public enum Turno {
-			Vespestino,
 			Matunino,
+			Vespestino,
 			Noturno,
 		}
 
@@ -22,13 +22,14 @@ public class Horario {
 			this.turno = turno;
       this.dia = dia;
 			if (turno == Turno.Noturno && hora > 1) {
-				throw new IllegalArgumentException("Turno Noturno só possue horario 1 e 2");
+				throw new IllegalArgumentException("Turno Noturno só possue horario 0 e 2");
 			}
 			if (hora > 2){
-				throw new IllegalArgumentException("Horario deve ser entre 1 e 3");
+				throw new IllegalArgumentException("Horario deve ser entre 0 e 2");
 			}
       this.hora = horario;
 		}
+		
 		public Horario(int turno, int dia, int horario) {
 			this.turno = Turno.values()[turno];
       this.dia = Dia.values()[dia];
