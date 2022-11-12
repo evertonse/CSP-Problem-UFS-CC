@@ -95,7 +95,7 @@ public class Horario {
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj==null){
+		if(obj == null || this == null){
 			return false;
 		}
 		

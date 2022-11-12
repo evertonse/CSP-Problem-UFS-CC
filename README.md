@@ -55,7 +55,7 @@
 - Agora rode esse programa com o comando abaixo:
 		
 		$ java Compile
-
+	
 - Se tudo deu certo, então o projeto foi compilado, basta agora rodar com o comando abaixo:
 	
 		$ java -cp "./build/" ufs.Main

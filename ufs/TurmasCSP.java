@@ -2,13 +2,8 @@ package ufs;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Arrays;
-import java.util.Locale;
 import java.util.Map;
 
-import javax.swing.text.html.FormView;
-
-import aima.core.environment.support.CSPFactory;
 import aima.core.search.api.Assignment;
 import aima.core.search.api.CSP;
 import aima.core.search.api.Constraint;
@@ -26,8 +21,8 @@ public class TurmasCSP {
 
 // assembly of a car
 public static void run() {
-	final int N_TURMAS_PARA_ESCOLHA = 6;
-	final int N_TURMAS_ORFERTADAS 	= 25;
+	final int N_TURMAS_PARA_ESCOLHA = 5;
+	final int N_TURMAS_ORFERTADAS 	= 45;
 	
 	System.out.print(">>>>>>>>>>>>>>>>>>>>>> TurmaCSP <<<<<<<<<<<<<<<<<<<<<<<\n");
 	
@@ -47,6 +42,7 @@ public static void run() {
 	
 	Estudante e = new Estudante(
 		disciplinas_cursadas,
+		Horario.Turno.Vespestino,
 		PIBIC,PIBITI,ESTAGIO
 	);
 
@@ -88,11 +84,17 @@ public static void run() {
 
 static public Object[][] getDomains(int variables_length,int n_turmas, Estudante e){
 	
-	Turma[] all_turmas = Turma.getOfertas(n_turmas,1); // 25 turmas no horario 1 (vespertino)
+	Turma[] all_turmas = Turma.getOfertas(n_turmas,e.turno); // 25 turmas no horario 1 (vespertino)
 	
 	System.out.println(">> Turmas Ofertadas:");
 	for(Turma t: all_turmas) {
 		System.out.println(t);
+	}
+	System.out.println("<<\n");
+	
+	System.out.println(">> Disciplinas Cursadas pelo estudante:");
+	for(Disciplina d: e.getDisciplinasCursadas()) {
+		System.out.println(d);
 	}
 	System.out.println("<<\n");
 	// Cada dominio indica são as possiveis turmas que podem ser associadas a uma escolha de turma
@@ -116,6 +118,7 @@ static public Object[][] getDomains(int variables_length,int n_turmas, Estudante
 			turmas_restringidas.add(all_turmas[i]);
 		}
 	}
+	turmas_restringidas.add(Turma.getTurmaVazia());
 
 	Object[][] domains = new Object[variables_length][turmas_restringidas.size()];
 	for (int i = 0; i < variables_length; i++) {
@@ -150,6 +153,29 @@ static public Constraint[] getConstraints(String[] variables, Estudante estudant
 			);
 		}
 	}
+
+	Constraint min_max_carga_horario = new BasicConstraint(
+		variables,
+		(vals) -> {
+			int sum = 0;
+			
+			for (Object val : vals) {
+				sum += ((Turma) val).getDisciplina().getCargaHoraria();
+			}
+
+			System.out.println("sum de " + vals.length + " ch = " + sum);
+			if (sum >= 240 && sum <= 480){
+				return true;
+			} 
+			else{
+				return false;
+			}
+
+		}
+	);
+	restrictions.add(min_max_carga_horario);
+
+	System.out.println("min_max_carga_horario.isBinary() = " + min_max_carga_horario.isBinary());
 /* 
 	for (int i = 0; i < variables.length; i++) {
 		for (Disciplina e_disc : estudante.getDisciplinasCursadas()) {
