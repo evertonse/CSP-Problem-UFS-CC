@@ -143,11 +143,25 @@ public class Disciplina {
 	}
 
 	static public Disciplina disciplinaFromCode(String code) {
-		return Disciplina.code_to_disc.get(code);
+		Disciplina d = Disciplina.code_to_disc.get(code);
+		if (d == null) {
+			Disciplina.getAll();
+		}
+		d = Disciplina.code_to_disc.get(code);
+		return d;
 	}
 
 	@Override
 	public String toString() {
 		return String.format("%-10s %1s %-3s %1s %-50s", this.code,"", Integer.toString(this.getCargaHoraria()),"", this.name);
+	}
+	
+	public String getCode() {
+		return this.code;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return this.code.equals( ((Disciplina)obj).getCode() );
 	}
 }

@@ -80,8 +80,10 @@ public class Turma {
 				horarios[4] = new Horario(turno, 4, hora);
 			}
 			else {
+				i = i-1;
+				continue;
 				// turmas[i] = turmas[i-1]; continue;
-				throw new UnsupportedOperationException("Não pensei sobre esse caso Ainda");
+				// throw new UnsupportedOperationException("creditos = "+ String.valueOf(cr)+"\n Disciplina = " + disciplinas[disc] +"\nNão pensei sobre esse caso Ainda");
 			} 
 
 			turmas[i] = new Turma(disciplinas[disc],horarios, professores[prof]);
@@ -89,6 +91,10 @@ public class Turma {
 		return turmas;
 	}
 
+	public Disciplina getDisciplina() {
+		return this.disc;
+	}
+	
 	public boolean conflita(Turma t2) {
 		if (t2 == null) {
       return false;

@@ -1,14 +1,14 @@
 package ufs.cc;
 
 public class Horario {
-		enum Dia {
+		public enum Dia {
 			Seg,
 			Ter,
 			Qua,
       Qui,
       Sex,
 		}
-		enum Turno {
+		public enum Turno {
 			Vespestino,
 			Matunino,
 			Noturno,
@@ -95,6 +95,10 @@ public class Horario {
 
 	@Override
 	public boolean equals(Object obj) {
+		if(obj==null){
+			return false;
+		}
+		
 		if( 
 				 ((Horario)obj).dia 	== this.dia 
 			&& ((Horario)obj).turno == this.turno

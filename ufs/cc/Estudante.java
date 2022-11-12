@@ -24,5 +24,7 @@ public class Estudante {
 	public void setHorasPorCredito(int horas_de_estudo, int credito) {
 		HORAS_POR_CR = horas_de_estudo/credito;
 	}
-
+	public Disciplina[] getDisciplinasCursadas() {
+		return this.disciplinas_cursadas;
+	}
 }	
