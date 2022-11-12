@@ -24,6 +24,8 @@ public class TurmasCSP {
 public static void run() {
 	final int N_TURMAS_PARA_ESCOLHA = 7;
 	final int N_TURMAS_ORFERTADAS 	= 45;
+	final int CARGA_HORARIO_MAXIMA 	= 480;
+	final int CARGA_HORARIO_MINIMA 	= 240;
 	
 	System.out.print(">>>>>>>>>>>>>>>>>>>>>> TurmaCSP <<<<<<<<<<<<<<<<<<<<<<<\n");
 	
@@ -58,7 +60,7 @@ public static void run() {
 	String[] variables        = getVariables(N_TURMAS_PARA_ESCOLHA);
 	// Cada dominio indica são as possiveis turmas que podem ser associadas a uma escolha de turma
 	Object[][] domains        = getDomains(variables.length,N_TURMAS_ORFERTADAS,e);	
-	Constraint[] restrictions = getConstraints(variables,e);
+	Constraint[] restrictions = getConstraints(variables,e, CARGA_HORARIO_MAXIMA,CARGA_HORARIO_MINIMA);
 
 	CSP csp = new BasicCSP( variables, domains, restrictions);
 	printCSP(csp);
@@ -158,7 +160,7 @@ static public String[] getVariables(int n_turmas){
 }
 
 
-static public Constraint[] getConstraints(String[] variables, Estudante estudante){
+static public Constraint[] getConstraints(String[] variables, Estudante estudante, int ch_max, int ch_min){
 	List<Constraint> restrictions = new ArrayList<>(25);
 
 	Constraint min_max_carga_horario = new BasicConstraint(
@@ -172,7 +174,7 @@ static public Constraint[] getConstraints(String[] variables, Estudante estudant
 			}
 			
 			System.out.println("sum de " + vals.length + " ch = " + sum);
-			if (sum >= 240 && sum <= 480){
+			if (sum >= 240 && ch_min <= ch_max){
 				return true;
 			} 
 			else{

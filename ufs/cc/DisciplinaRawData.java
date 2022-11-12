@@ -54,7 +54,7 @@ public class  DisciplinaRawData {
 		else if (periodo == 5)
 		return new String[]
 		{
-			"COMP0478,Informática, Ética e Sociedade,Disc.,04,60,60,0,-",
+			"COMP0478,Informática Ética e Sociedade,Disc.,04,60,60,0,-",
 			"COMP0397,Programação Paralela e Concorrente**,Disc.,04,60,30,30,COMP0415(PRO);COMP0405(PRO)",
 			"COMP0438,Engenharia de Software I,Disc.,04,60,30,30,COMP0395(PRO)",
 			"COMP0461,Redes de Computadores,Disc.,04,60,30,30,COMP0415(PRO)",
