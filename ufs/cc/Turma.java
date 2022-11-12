@@ -86,6 +86,9 @@ public class Turma {
 				// throw new UnsupportedOperationException("creditos = "+ String.valueOf(cr)+"\n Disciplina = " + disciplinas[disc] +"\nNão pensei sobre esse caso Ainda");
 			} 
 
+			for (Horario horario : horarios) {
+				assert(horario != null);
+			}
 			turmas[i] = new Turma(disciplinas[disc],horarios, professores[prof]);
 		}
 		return turmas;
@@ -95,13 +98,19 @@ public class Turma {
 		return this.disc;
 	}
 	
+	public Horario[] getHorarios() {
+		return this.horarios;
+	}
+	
 	public boolean conflita(Turma t2) {
 		if (t2 == null) {
       return false;
     }
-		
-		for (Horario horario : this.horarios) {
-			for (Horario horario2 : t2.horarios) {
+		for (Horario horario : this.getHorarios()) {
+			for (Horario horario2 : t2.getHorarios()) {
+				if (horario == null && horario2 == null) {
+					System.out.println("NULL ALERT" + this.toString() + t2.toString());
+        }
 				// se pelo menos 1 horario conflitar então as duas turmas conflitam
 				if (horario.equals(horario2)) {
 					return true;
@@ -118,6 +127,9 @@ public class Turma {
 		sb.append(disc.toString() + " ");
 
 		for(Horario h: this.horarios) {
+			if (h == null){
+				continue;
+			}
 			sb.append(h.toString() + " ");
 		}
 		sb.append(this.professor);

@@ -58,7 +58,7 @@
 
 - Se tudo deu certo, então o projeto foi compilado, basta agora rodar com o comando abaixo:
 	
-		$ java -cp "./build/" Main
+		$ java -cp "./build/" ufs.Main
 		
 ## Compilar: Opção 3 - Manualmente:
 - Rode o comando abaixo para *compilar*:
@@ -71,7 +71,7 @@
 
 - Rode o comando abaixo para iniciar o programa a partir da classe `Main` do projeto
 	
-		$ java -cp "./build/" Main
+		$ java -cp "./build/" ufs.Main
 
 ## Compilar: Opção 4 (caso esteja faltando o código do AIMA):
 

@@ -23,7 +23,7 @@ print(cmd_compile)
 code:int = os.system(cmd_compile)
 
 if (code == 0):
-	cmd_run     :str = f'java -cp "{classpath}" Main'
+	cmd_run     :str = f'java -cp "{classpath}" ufs.Main'
 	print(cmd_run)
 	code:int = os.system(cmd_run)	
 

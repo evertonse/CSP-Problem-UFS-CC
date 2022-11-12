@@ -26,13 +26,11 @@ public class TurmasCSP {
 
 // assembly of a car
 public static void run() {
-	final int N_TURMAS_PARA_ESCOLHA = 3;
-	final int N_TURMAS_ORFERTADAS 	= 10;
+	final int N_TURMAS_PARA_ESCOLHA = 6;
+	final int N_TURMAS_ORFERTADAS 	= 25;
 	
 	System.out.print(">>>>>>>>>>>>>>>>>>>>>> TurmaCSP <<<<<<<<<<<<<<<<<<<<<<<\n");
 	
-	
-
 	Disciplina[] disciplinas_cursadas = new Disciplina[]{
 		Disciplina.disciplinaFromCode("MAT0152"),
 		Disciplina.disciplinaFromCode("MAT0078"),
@@ -51,6 +49,7 @@ public static void run() {
 		disciplinas_cursadas,
 		PIBIC,PIBITI,ESTAGIO
 	);
+
 	
 	String[] variables        = getVariables(N_TURMAS_PARA_ESCOLHA);
 	// Cada dominio indica são as possiveis turmas que podem ser associadas a uma escolha de turma
@@ -68,13 +67,18 @@ public static void run() {
 	
 	BacktrackingSearch search = new BacktrackingSearch();
 	Assignment assignment = search.apply(csp);
-	Map<String,Object> assignment_map = assignment.getAssignments();
 	
 	System.out.println("\nApós aplicar BacktrackingSearch.apply(csp)");
-	System.out.println(assignment);
+	
+	if(assignment == null) {
+		System.out.println("assignment = " + assignment);
+		System.out.println("Não foi possivel encontrar atribuições completa e consistente");
+
+	}
 	System.out.println("Solução ? : " + (assignment.isSolution(csp) ? "True": "False"));
 	//printCSP(csp);
 	
+	Map<String,Object> assignment_map = assignment.getAssignments();
 	System.out.println("=====================================================================");
 		for (Map.Entry<String, Object> entry : assignment_map.entrySet()) {
 			System.out.println("\n >> " + entry.getKey() + " = " + (Turma)entry.getValue() + "\n");
@@ -85,6 +89,12 @@ public static void run() {
 static public Object[][] getDomains(int variables_length,int n_turmas, Estudante e){
 	
 	Turma[] all_turmas = Turma.getOfertas(n_turmas,1); // 25 turmas no horario 1 (vespertino)
+	
+	System.out.println(">> Turmas Ofertadas:");
+	for(Turma t: all_turmas) {
+		System.out.println(t);
+	}
+	System.out.println("<<\n");
 	// Cada dominio indica são as possiveis turmas que podem ser associadas a uma escolha de turma
 	Disciplina[] cursadas = e.getDisciplinasCursadas();
 
