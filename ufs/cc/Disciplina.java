@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Set;
+import java.util.HashSet;
 
 public class Disciplina {
 	enum Perfil { 
@@ -17,7 +19,7 @@ public class Disciplina {
 	static private Map<String,Disciplina> code_to_disc = new HashMap<>();
 	
 	String code,name;
-	List<String> pre_req_codes;
+	Set<String> pre_req_codes;
 
 	int  carga_horaria_total,carga_horaria_teorica,carga_horaria_pratica;
 	// 1º, 2º, ..., periodo
@@ -128,17 +130,44 @@ public class Disciplina {
 		return disc;
 	}
 
+	public boolean satisfazPreReq(Disciplina[] cursadas) { 
+		
+		if(this.pre_req_codes == null){
+			return true;
+		}
+
+		if(this.pre_req_codes.size() == 0){
+			return true;
+		}
+		
+		Set<String> cursadas_code = new HashSet<String>(10);
+		for (int i = 0; i < cursadas.length; i++) {
+			cursadas_code.add(cursadas[i].getCode());
+		}
+
+		for (String req_code : this.pre_req_codes) {
+			if(cursadas_code.contains(req_code) == false){
+				// Se não existe o pre requisito entre as cursadas
+				// então ele não satisfaz pre requisito
+				return false;
+			}
+		}
+		// Se chegou até aqui então cada prerequisito
+		// estava entre as cursadas e portanto, satisfaz
+		return true;
+	}
+
 	public int getCargaHoraria() {
 		return carga_horaria_pratica + carga_horaria_teorica;
 	}
 	
 	public void setPreReq(List<String> codes) {
-		this.pre_req_codes = new ArrayList<String>(codes);
+		this.pre_req_codes = new HashSet<String>(codes);
 	}
 
 	public void addPreReq(String code) {
 		if (pre_req_codes == null)
-			pre_req_codes = new ArrayList<>(3);
+			pre_req_codes = new HashSet<>(3);
 		this.pre_req_codes.add(code);
 	}
 

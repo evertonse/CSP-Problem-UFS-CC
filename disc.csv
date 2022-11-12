@@ -1,12 +1,11 @@
 // Código Componente,Curricular,Tipo,CR,CH Total,CH Teórico,CH Prática Pré-Requisito
 // Perfil:Básico 
 // 1º Período
-MAT0152,Cálculo B,Disc.,04,60,60,0,MAT0151(PRO)
-MAT0078,Álgebra Linear I,Disc.,04,60,60,0,MAT0150(PRO)
-FISI0260,Física 1,Disc.,04,60,45,15,MAT0151(PRO);MAT0150(PRO)
-FISI0264,Laboratório de Física1*,Disc.,02,30,0,30,MAT0151(PRO)
-COMP0410,Lógica para Computação,Disc.,04,60,45,15,MAT0057(PRO)
-COMP0334,Programação Imperativa**,Disc.,04,60,30,30,-
+MAT0151,Cálculo A,Disc.,04,60,60,0,-
+MAT0150,Vetores e Geometria Analítica,Disc,04,60,60,0,-
+MAT0057,Fundamentos Elementares dade Matemática,Disc.,04,60,60,0,-
+COMP0480,Seminários em Computação,Disc.,02,30,30,0,- 
+COMP0393,Programação Funcional**,Disc.,04,60,30,30,-
 // 2º Período
 MAT0152,Cálculo B,Disc.,04,60,60,0,MAT0151(PRO)
 MAT0078,Álgebra Linear I,Disc.,04,60,60,0,MAT0150(PRO)

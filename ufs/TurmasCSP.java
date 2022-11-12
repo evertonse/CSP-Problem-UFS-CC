@@ -22,12 +22,19 @@ public class TurmasCSP {
 
 // assembly of a car
 public static void run() {
-	final int N_TURMAS_PARA_ESCOLHA = 5;
+	final int N_TURMAS_PARA_ESCOLHA = 7;
 	final int N_TURMAS_ORFERTADAS 	= 45;
 	
 	System.out.print(">>>>>>>>>>>>>>>>>>>>>> TurmaCSP <<<<<<<<<<<<<<<<<<<<<<<\n");
 	
 	Disciplina[] disciplinas_cursadas = new Disciplina[]{
+		// Periodo 1
+		Disciplina.disciplinaFromCode("MAT0151"),
+		Disciplina.disciplinaFromCode("MAT0150"),
+		Disciplina.disciplinaFromCode("MAT0057"),
+		Disciplina.disciplinaFromCode("COMP0480"),
+		Disciplina.disciplinaFromCode("COMP0393"),
+		// Periodo 2
 		Disciplina.disciplinaFromCode("MAT0152"),
 		Disciplina.disciplinaFromCode("MAT0078"),
 		Disciplina.disciplinaFromCode("FISI0260"),
@@ -87,20 +94,30 @@ public static void run() {
 static public Object[][] getDomains(int variables_length,int n_turmas, Estudante e){
 	
 	Turma[] all_turmas = Turma.getOfertas(n_turmas,e.turno); // 25 turmas no horario 1 (vespertino)
-	
+	System.out.println("\n>> Turmas Ofertadas:");
+	for(Turma t: all_turmas) {
+		System.out.println(t);
+	}
 
 	// Cada dominio indica são as possiveis turmas que podem ser associadas a uma escolha de turma
 	Disciplina[] cursadas = e.getDisciplinasCursadas();
 
-
+	// Turmas devem ser restringidas para garantir um dominio viavel
+	// Isto é, devemos tirar tomas as disciplians que o aluno ja cursou,
+	// além das disciplinas que o aluno não tem pre-requisitos para cursar
 	ArrayList<Turma> turmas_restringidas = new ArrayList<Turma>();
 
 	for (int i = 0; i < all_turmas.length; i++) {
 		boolean disciplina_permitida = true;
 		for (int j = 0; j < cursadas.length; j++) {
+			Disciplina d  = all_turmas[i].getDisciplina();
 			// Checando se a turma é de alguma disciplina já cursada pelo discente
-			boolean iguais = all_turmas[i].getDisciplina().equals(cursadas[j]);
-			if (iguais) {
+			boolean iguais = d.equals(cursadas[j]);
+			boolean satisfaz_prerequisito = d.satisfazPreReq(cursadas);
+			// Se as turmas são iguais a que ele cursou
+			// Ou ele não satisfaz o prerequisito então 
+			// a disciplinas nao é permitida
+			if (iguais || ! satisfaz_prerequisito) {
 				disciplina_permitida = false;
 				break;
 			}
@@ -117,13 +134,13 @@ static public Object[][] getDomains(int variables_length,int n_turmas, Estudante
 		domains[i] = turmas_restringidas.toArray().clone();
 	}
 	
-	System.out.println(">> Turmas Ofertadas:");
+	System.out.println("\n>> Turmas Possiveis para o aluno:  considerando (pre-requisito e nao repetir turma já cursada):");
 	for(Turma t: turmas_restringidas) {
 		System.out.println(t);
 	}
 	System.out.println("<<\n");
 	
-	System.out.println(">> Disciplinas Cursadas pelo estudante:");
+	System.out.println("\n>> Disciplinas Cursadas pelo estudante:");
 	for(Disciplina d: e.getDisciplinasCursadas()) {
 		System.out.println(d);
 	}
