@@ -28,7 +28,7 @@ public static void run() {
 	final int CARGA_HORARIO_MAXIMA_PPC	= 480;
 	final int CARGA_HORARIO_MINIMA_PPC	= 240;
 	
-	System.out.print(">>>>>>>>>>>>>>>>>>>>>> TurmaCSP <<<<<<<<<<<<<<<<<<<<<<<\n");
+	System.out.print("------------------- TurmaCSP ------------------- \n");
 	
 	Disciplina[] disciplinas_cursadas = new Disciplina[]{
 		// Periodo 1
@@ -47,9 +47,9 @@ public static void run() {
 	};
 
 	boolean 
-	PIBIC 	= true,
-	ESTAGIO = false,
-	PIBITI 	= false;
+		PIBIC 	= true,
+		ESTAGIO = false,
+		PIBITI 	= false;
 	
 	Estudante e = new Estudante(
 		disciplinas_cursadas,
@@ -58,9 +58,9 @@ public static void run() {
 	);
 	
 	// Meira hora extra de estudo a caga 15 horas de carga horaria
-	e.setHorasSemanaisExtraPorCargaHoraria(0.5f,15.0f);
-	e.setHorasDeViagemIda(1.f);
-	e.setHorasDeViagemVolta(1.f);
+	e.setHorasSemanaisExtraPorCargaHoraria(0.7f,15.0f);
+	e.setHorasDeViagemIda(1.1f);
+	e.setHorasDeViagemVolta(1.1f);
 
 	System.out.println(e + "\n");
 	
@@ -69,8 +69,8 @@ public static void run() {
 	final int CARGA_HORARIO_MAXIMA =   CARGA_HORARIO_MAXIMA_DO_ALUNO < CARGA_HORARIO_MAXIMA_PPC?  CARGA_HORARIO_MAXIMA_DO_ALUNO : CARGA_HORARIO_MAXIMA_PPC;
 	
 	System.out.println("CARGA_HORARIO_MAXIMA_DO_ALUNO = " + CARGA_HORARIO_MAXIMA_DO_ALUNO);
-	System.out.println("CARGA_HORARIO_MAXIMA = " + CARGA_HORARIO_MAXIMA);
-	
+	System.out.println("CARGA_HORARIO_MAXIMA_PPC = " + CARGA_HORARIO_MAXIMA_PPC);
+
 	String[] variables        = getVariables(N_TURMAS_PARA_ESCOLHA);
 	// Cada dominio indica são as possiveis turmas que podem ser associadas a uma escolha de turma
 	Object[][] domains        = getDomains(variables.length,N_TURMAS_ORFERTADAS,e);	
@@ -157,7 +157,7 @@ static public Object[][] getDomains(int variables_length,int n_turmas, Estudante
 	}
 	System.out.println("<<\n");
 	
-	System.out.println("\n>> Disciplinas Cursadas pelo estudante:");
+	System.out.println("\n>> Disciplinas Cursadas anteriormente pelo aluno:");
 	for(Disciplina d: e.getDisciplinasCursadas()) {
 		System.out.println(d);
 	}

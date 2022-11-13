@@ -68,7 +68,7 @@ public class Estudante {
 	@Override
 	public String toString() {
 		return String.format("\n>>Aluno: \nPIBIC:%b ESTAGIO:%b PIBITI:%b\n" +
-		"Horas Disponiveis para Estudar = %f\n" + 
+		"Horas Diarias Disponiveis para Estudar = %f\n" + 
 		"Horas de Estudo Diario (incluso horario de aula + estudo fora de aula) por Carga Horária = %f\n"+
 		"<<", 
 			this.PIBIC,this.ESTAGIO, this.PIBITI,

@@ -17,7 +17,7 @@ public class Main {
 
 		// CSP das Turmas
 		TurmasCSP.run();
-
-		new Scanner(System.in).nextLine();
+		if (! SEND_TO_OUTPUT_FILE)
+			new Scanner(System.in).nextLine();
 	}
 }

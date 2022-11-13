@@ -109,7 +109,7 @@ public class Disciplina {
 		int disc_ch_pratica = data[6].equals("-") ? 0 : Integer.parseInt(data[6]);
 		
 		if (disc_ch_teorica + disc_ch_teorica == 0) {
-			System.out.println(data[4]);
+			//System.out.println(data[4]);
 			disc_ch_teorica = data[4] == "-" ? 0 : Integer.parseInt(data[4]);
 		}
 		
