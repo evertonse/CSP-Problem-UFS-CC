@@ -22,10 +22,11 @@ public class TurmasCSP {
 
 // assembly of a car
 public static void run() {
-	final int N_TURMAS_PARA_ESCOLHA = 7;
-	final int N_TURMAS_ORFERTADAS 	= 45;
-	final int CARGA_HORARIO_MAXIMA 	= 480;
-	final int CARGA_HORARIO_MINIMA 	= 240;
+	final int N_TURMAS_PARA_ESCOLHA	= 7;
+	final int N_TURMAS_ORFERTADAS		= 45;
+
+	final int CARGA_HORARIO_MAXIMA_PPC	= 480;
+	final int CARGA_HORARIO_MINIMA_PPC	= 240;
 	
 	System.out.print(">>>>>>>>>>>>>>>>>>>>>> TurmaCSP <<<<<<<<<<<<<<<<<<<<<<<\n");
 	
@@ -55,12 +56,25 @@ public static void run() {
 		Horario.Turno.Vespestino,
 		PIBIC,PIBITI,ESTAGIO
 	);
+	
+	// Meira hora extra de estudo a caga 15 horas de carga horaria
+	e.setHorasSemanaisExtraPorCargaHoraria(0.5f,15.0f);
+	e.setHorasDeViagemIda(1.f);
+	e.setHorasDeViagemVolta(1.f);
 
+	System.out.println(e + "\n");
+	
+	final int CARGA_HORARIO_MAXIMA_DO_ALUNO = e.cargaHorariaMax();
+	
+	final int CARGA_HORARIO_MAXIMA =   CARGA_HORARIO_MAXIMA_DO_ALUNO < CARGA_HORARIO_MAXIMA_PPC?  CARGA_HORARIO_MAXIMA_DO_ALUNO : CARGA_HORARIO_MAXIMA_PPC;
+	
+	System.out.println("CARGA_HORARIO_MAXIMA_DO_ALUNO = " + CARGA_HORARIO_MAXIMA_DO_ALUNO);
+	System.out.println("CARGA_HORARIO_MAXIMA = " + CARGA_HORARIO_MAXIMA);
 	
 	String[] variables        = getVariables(N_TURMAS_PARA_ESCOLHA);
 	// Cada dominio indica são as possiveis turmas que podem ser associadas a uma escolha de turma
 	Object[][] domains        = getDomains(variables.length,N_TURMAS_ORFERTADAS,e);	
-	Constraint[] restrictions = getConstraints(variables,e, CARGA_HORARIO_MAXIMA,CARGA_HORARIO_MINIMA);
+	Constraint[] restrictions = getConstraints(variables,e, CARGA_HORARIO_MAXIMA,CARGA_HORARIO_MINIMA_PPC);
 
 	CSP csp = new BasicCSP( variables, domains, restrictions);
 	printCSP(csp);
@@ -112,7 +126,8 @@ static public Object[][] getDomains(int variables_length,int n_turmas, Estudante
 	for (int i = 0; i < all_turmas.length; i++) {
 		boolean disciplina_permitida = true;
 		for (int j = 0; j < cursadas.length; j++) {
-			Disciplina d  = all_turmas[i].getDisciplina();
+			Turma t =  all_turmas[i];
+			Disciplina d  = t.getDisciplina();
 			// Checando se a turma é de alguma disciplina já cursada pelo discente
 			boolean iguais = d.equals(cursadas[j]);
 			boolean satisfaz_prerequisito = d.satisfazPreReq(cursadas);
@@ -170,10 +185,8 @@ static public Constraint[] getConstraints(String[] variables, Estudante estudant
 			
 			for (Object val : vals) {
 				sum += ((Turma) val).getDisciplina().getCargaHoraria();
-				System.out.println(((Turma) val));
 			}
 			
-			System.out.println("sum de " + vals.length + " ch = " + sum);
 			if (sum >= 240 && ch_min <= ch_max){
 				return true;
 			} 

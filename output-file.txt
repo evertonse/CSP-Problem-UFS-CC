@@ -7,66 +7,71 @@
 210
 120
 
+>>Aluno: 
+PIBIC:true ESTAGIO:false PIBITI:false
+Horas Disponiveis para Estudar = 12,000000
+Horas de Estudo Diario (incluso horario de aula + estudo fora de aula) por Carga Horária = 0,100000
+<<
+
+CARGA_HORARIO_MAXIMA_DO_ALUNO600
+CARGA_HORARIO_MAXIMA480
+
 >> Turmas Ofertadas:
-2022.2 COMP0443     60    Interface Humano Computador                        Sex 15:00-16:50 Sex 17:00-18:50 Alberto Costa
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 COMP0472     60    Sistemas Operacionais                              Seg 13:00-14:50 Qua 13:00-14:50 Leonardo Nogueira
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Rafael
-2022.2 MAT0078      60    Álgebra Linear I                                   Seg 17:00-18:50 Qua 17:00-18:50 Alberto Costa
-2022.2 MAT0078      60    Álgebra Linear I                                   Ter 17:00-18:50 Qui 17:00-18:50 Rafael
-2022.2 COMP0410     60    Lógica para Computação                             Seg 13:00-14:50 Qua 13:00-14:50 Evilson
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 MAT0152      60    Cálculo B                                          Seg 17:00-18:50 Qua 17:00-18:50 Rene Pereira
-2022.2 COMP0439     60    Engenharia de Software II                          Sex 15:00-16:50 Sex 17:00-18:50 Rene Pereira
-2022.2 COMP0480     30    Seminários em Computação                           Ter 17:00-18:50 Rafael
-2022.2 COMP0470     60    Sistemas Distribuídos                              Sex 15:00-16:50 Sex 17:00-18:50 Rafael
-2022.2 COMP0393     60    Programação Funcional**                            Seg 13:00-14:50 Qua 13:00-14:50 Rene Pereira
-2022.2 COMP0472     60    Sistemas Operacionais                              Seg 17:00-18:50 Qua 17:00-18:50 Tarcisio Rocha
-2022.2 FISI0264     60    Laboratório de Física1*                            Ter 13:00-14:50 Qui 13:00-14:50 Rene Pereira
+2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 17:00-18:50 Qua 17:00-18:50 Rene Pereira
+2022.2 FISI0264     60    Laboratório de Física1*                            Sex 15:00-16:50 Sex 17:00-18:50 Evilson
+2022.2 COMP0308     120   Atividades Complementares                          Seg 13:00-14:50 Ter 13:00-14:50 Qua 13:00-14:50 Qui 13:00-14:50 Tarcisio Rocha
+2022.2 COMP0424     60    Aprendizagem de Máquina                            Seg 15:00-16:50 Qua 15:00-16:50 Alberto Costa
+2022.2 COMP0397     60    Programação Paralela e Concorrente**               Seg 13:00-14:50 Qua 13:00-14:50 Leonardo Nogueira
+2022.2 COMP0397     60    Programação Paralela e Concorrente**               Ter 15:00-16:50 Qui 15:00-16:50 Rafael
+2022.2 COMP0308     120   Atividades Complementares                          Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Estombelo
+2022.2 MAT0151      60    Cálculo A                                          Sex 15:00-16:50 Sex 17:00-18:50 Estombelo
 2022.2 COMP0412     60    Projeto e Análise de Algoritmos**                  Sex 15:00-16:50 Sex 17:00-18:50 Estombelo
-2022.2 FISI0260     60    Física 1                                           Sex 15:00-16:50 Sex 17:00-18:50 Rene Pereira
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0439     60    Engenharia de Software II                          Ter 17:00-18:50 Qui 17:00-18:50 Beatriz Trinchao
-2022.2 COMP0439     60    Engenharia de Software II                          Ter 15:00-16:50 Qui 15:00-16:50 Estombelo
-2022.2 COMP0424     60    Aprendizagem de Máquina                            Seg 13:00-14:50 Qua 13:00-14:50 Tarcisio Rocha
-2022.2 COMP0481     30    Métodos e Técnicas de Pesquisa para Computação**   Seg 17:00-18:50 Tarcisio Rocha
-2022.2 COMP0483     180   Prática Orientada em Computação I*                 Seg 15:00-16:50 Ter 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Ter 17:00-18:50 Alberto Costa
-2022.2 COMP0393     60    Programação Funcional**                            Ter 15:00-16:50 Qui 15:00-16:50 Beatriz Trinchao
+2022.2 MAT0151      60    Cálculo A                                          Sex 15:00-16:50 Sex 17:00-18:50 Evilson
+2022.2 COMP0480     30    Seminários em Computação                           Seg 15:00-16:50 Rafael
+2022.2 COMP0455     60    Banco de Dados I                                   Seg 13:00-14:50 Qua 13:00-14:50 Estombelo
+2022.2 COMP0461     60    Redes de Computadores                              Ter 13:00-14:50 Qui 13:00-14:50 Evilson
+2022.2 COMP0424     60    Aprendizagem de Máquina                            Ter 17:00-18:50 Qui 17:00-18:50 Leonardo Nogueira
+2022.2 COMP0427     60    Inteligência Artificial                            Seg 13:00-14:50 Qua 13:00-14:50 Rafael
+2022.2 COMP0412     60    Projeto e Análise de Algoritmos**                  Sex 15:00-16:50 Sex 17:00-18:50 Beatriz Trinchao
+2022.2 COMP0424     60    Aprendizagem de Máquina                            Ter 15:00-16:50 Qui 15:00-16:50 Rafael
+2022.2 COMP0393     60    Programação Funcional**                            Ter 17:00-18:50 Qui 17:00-18:50 Bruno Otavio
+2022.2 COMP0478     60    Informática Ética e Sociedade                      Seg 17:00-18:50 Qua 17:00-18:50 Tarcisio Rocha
+2022.2 COMP0334     60    Programação Imperativa**                           Seg 15:00-16:50 Qua 15:00-16:50 Leonardo Nogueira
+2022.2 COMP0439     60    Engenharia de Software II                          Seg 13:00-14:50 Qua 13:00-14:50 Estombelo
+2022.2 COMP0405     60    Estruturas de Dados**                              Seg 13:00-14:50 Qua 13:00-14:50 Rene Pereira
+2022.2 MAT0150      60    Vetores e Geometria Analítica                      Ter 17:00-18:50 Qui 17:00-18:50 Alberto Costa
+2022.2 COMP0485     120   Trabalho de Conclusão de Curso I                   Seg 13:00-14:50 Ter 13:00-14:50 Qua 13:00-14:50 Qui 13:00-14:50 Beatriz Trinchao
+2022.2 FISI0260     60    Física 1                                           Ter 15:00-16:50 Qui 15:00-16:50 Rafael
+2022.2 COMP0397     60    Programação Paralela e Concorrente**               Seg 15:00-16:50 Qua 15:00-16:50 Evilson
+2022.2 COMP0439     60    Engenharia de Software II                          Ter 15:00-16:50 Qui 15:00-16:50 Alberto Costa
+2022.2 COMP0463     60    Laboratório de Redes de Computadores*              Ter 15:00-16:50 Qui 15:00-16:50 Leonardo Nogueira
+2022.2 FISI0260     60    Física 1                                           Ter 13:00-14:50 Qui 13:00-14:50 Rene Pereira
+2022.2 COMP0463     60    Laboratório de Redes de Computadores*              Seg 15:00-16:50 Qua 15:00-16:50 Rafael
+2022.2 COMP0463     60    Laboratório de Redes de Computadores*              Seg 13:00-14:50 Qua 13:00-14:50 Estombelo
+2022.2 COMP0397     60    Programação Paralela e Concorrente**               Sex 15:00-16:50 Sex 17:00-18:50 Beatriz Trinchao
 2022.2 COMP0470     60    Sistemas Distribuídos                              Sex 15:00-16:50 Sex 17:00-18:50 Beatriz Trinchao
-2022.2 COMP0484     120   Prática Orientada em Computação II *               Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Estombelo
-2022.2 COMP0391     60    Compiladores                                       Seg 15:00-16:50 Qua 15:00-16:50 Rene Pereira
-2022.2 COMP0391     60    Compiladores                                       Ter 13:00-14:50 Qui 13:00-14:50 Bruno Otavio
-2022.2 COMP0480     30    Seminários em Computação                           Sex 13:00-14:50 Rene Pereira
-2022.2 MAT0151      60    Cálculo A                                          Sex 15:00-16:50 Sex 17:00-18:50 Rene Pereira
-2022.2 COMP0461     60    Redes de Computadores                              Sex 15:00-16:50 Sex 17:00-18:50 Leonardo Nogueira
-2022.2 COMP0481     30    Métodos e Técnicas de Pesquisa para Computação**   Qua 15:00-16:50 Alberto Costa
-2022.2 COMP0472     60    Sistemas Operacionais                              Ter 17:00-18:50 Qui 17:00-18:50 Beatriz Trinchao
-2022.2 COMP0438     60    Engenharia de Software I                           Ter 17:00-18:50 Qui 17:00-18:50 Rene Pereira
-2022.2 COMP0415     60    Arquitetura de Computadores                        Ter 15:00-16:50 Qui 15:00-16:50 Estombelo
-2022.2 MAT0151      60    Cálculo A                                          Ter 17:00-18:50 Qui 17:00-18:50 Alberto Costa
-2022.2 FISI0260     60    Física 1                                           Ter 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 COMP0410     60    Lógica para Computação                             Sex 15:00-16:50 Sex 17:00-18:50 Leonardo Nogueira
-2022.2 FISI0260     60    Física 1                                           Sex 15:00-16:50 Sex 17:00-18:50 Alberto Costa
-2022.2 COMP0432     60    Processamento de Imagens                           Ter 17:00-18:50 Qui 17:00-18:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 COMP0412     60    Projeto e Análise de Algoritmos**                  Sex 15:00-16:50 Sex 17:00-18:50 Estombelo
-2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Sex 15:00-16:50 Estombelo
+2022.2 MAT0057      60    Fundamentos Elementares dade Matemática            Seg 17:00-18:50 Qua 17:00-18:50 Tarcisio Rocha
+2022.2 COMP0397     60    Programação Paralela e Concorrente**               Seg 17:00-18:50 Qua 17:00-18:50 Tarcisio Rocha
+2022.2 COMP0484     120   Prática Orientada em Computação II *               Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Leonardo Nogueira
+2022.2 COMP0478     60    Informática Ética e Sociedade                      Seg 13:00-14:50 Qua 13:00-14:50 Alberto Costa
+2022.2 COMP0424     60    Aprendizagem de Máquina                            Ter 13:00-14:50 Qui 13:00-14:50 Rene Pereira
+2022.2 FISI0260     60    Física 1                                           Seg 13:00-14:50 Qua 13:00-14:50 Alberto Costa
+2022.2 COMP0397     60    Programação Paralela e Concorrente**               Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
+2022.2 ESTAT0011    60    Estatística Aplicada                               Sex 15:00-16:50 Sex 17:00-18:50 Rene Pereira
+2022.2 FISI0264     60    Laboratório de Física1*                            Sex 15:00-16:50 Sex 17:00-18:50 Rene Pereira
+2022.2 FISI0264     60    Laboratório de Física1*                            Seg 13:00-14:50 Qua 13:00-14:50 Estombelo
+2022.2 COMP0391     60    Compiladores                                       Sex 15:00-16:50 Sex 17:00-18:50 Beatriz Trinchao
+2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Seg 15:00-16:50 Evilson
 
 >> Turmas Possiveis para o aluno:  considerando (pre-requisito e nao repetir turma já cursada):
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Rafael
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0481     30    Métodos e Técnicas de Pesquisa para Computação**   Seg 17:00-18:50 Tarcisio Rocha
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Ter 17:00-18:50 Alberto Costa
-2022.2 COMP0481     30    Métodos e Técnicas de Pesquisa para Computação**   Qua 15:00-16:50 Alberto Costa
-2022.2 COMP0415     60    Arquitetura de Computadores                        Ter 15:00-16:50 Qui 15:00-16:50 Estombelo
-2022.2 COMP0432     60    Processamento de Imagens                           Ter 17:00-18:50 Qui 17:00-18:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Sex 15:00-16:50 Estombelo
+2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 17:00-18:50 Qua 17:00-18:50 Rene Pereira
+2022.2 COMP0308     120   Atividades Complementares                          Seg 13:00-14:50 Ter 13:00-14:50 Qua 13:00-14:50 Qui 13:00-14:50 Tarcisio Rocha
+2022.2 COMP0308     120   Atividades Complementares                          Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Estombelo
+2022.2 COMP0478     60    Informática Ética e Sociedade                      Seg 17:00-18:50 Qua 17:00-18:50 Tarcisio Rocha
+2022.2 COMP0405     60    Estruturas de Dados**                              Seg 13:00-14:50 Qua 13:00-14:50 Rene Pereira
+2022.2 COMP0478     60    Informática Ética e Sociedade                      Seg 13:00-14:50 Qua 13:00-14:50 Alberto Costa
+2022.2 ESTAT0011    60    Estatística Aplicada                               Sex 15:00-16:50 Sex 17:00-18:50 Rene Pereira
+2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Seg 15:00-16:50 Evilson
 2022.2 VAZIA        0     Disciplina Nula                                    
 <<
 
@@ -89,13 +94,13 @@ COMP0334     60    Programação Imperativa**
 ---------------------------------------------------------------------
 Variaveis : [E1, E2, E3, E4, E5, E6, E7]
 |Dominios| = 7
-|Dominios[0]| = 13
-|Dominios[1]| = 13
-|Dominios[2]| = 13
-|Dominios[3]| = 13
-|Dominios[4]| = 13
-|Dominios[5]| = 13
-|Dominios[6]| = 13
+|Dominios[0]| = 9
+|Dominios[1]| = 9
+|Dominios[2]| = 9
+|Dominios[3]| = 9
+|Dominios[4]| = 9
+|Dominios[5]| = 9
+|Dominios[6]| = 9
 Tuplas da Relacao de Restricao = {(E1,E2,E3,E4,E5,E6,E7,),(E1,E2,),(E1,E3,),(E1,E4,),(E1,E5,),(E1,E6,),(E1,E7,),(E2,E1,),(E2,E3,),(E2,E4,),(E2,E5,),(E2,E6,),(E2,E7,),(E3,E1,),(E3,E2,),(E3,E4,),(E3,E5,),(E3,E6,),(E3,E7,),(E4,E1,),(E4,E2,),(E4,E3,),(E4,E5,),(E4,E6,),(E4,E7,),(E5,E1,),(E5,E2,),(E5,E3,),(E5,E4,),(E5,E6,),(E5,E7,),(E6,E1,),(E6,E2,),(E6,E3,),(E6,E4,),(E6,E5,),(E6,E7,),(E7,E1,),(E7,E2,),(E7,E3,),(E7,E4,),(E7,E5,),(E7,E6,), }
 |Restricoes| = 43
 ---------------------------------------------------------------------
@@ -104,147 +109,35 @@ Após aplicas AC3.test()
 ---------------------------------------------------------------------
 Variaveis : [E1, E2, E3, E4, E5, E6, E7]
 |Dominios| = 7
-|Dominios[0]| = 13
-|Dominios[1]| = 13
-|Dominios[2]| = 13
-|Dominios[3]| = 13
-|Dominios[4]| = 13
-|Dominios[5]| = 13
-|Dominios[6]| = 13
+|Dominios[0]| = 9
+|Dominios[1]| = 9
+|Dominios[2]| = 9
+|Dominios[3]| = 9
+|Dominios[4]| = 9
+|Dominios[5]| = 9
+|Dominios[6]| = 9
 Tuplas da Relacao de Restricao = {(E1,E2,E3,E4,E5,E6,E7,),(E1,E2,),(E1,E3,),(E1,E4,),(E1,E5,),(E1,E6,),(E1,E7,),(E2,E1,),(E2,E3,),(E2,E4,),(E2,E5,),(E2,E6,),(E2,E7,),(E3,E1,),(E3,E2,),(E3,E4,),(E3,E5,),(E3,E6,),(E3,E7,),(E4,E1,),(E4,E2,),(E4,E3,),(E4,E5,),(E4,E6,),(E4,E7,),(E5,E1,),(E5,E2,),(E5,E3,),(E5,E4,),(E5,E6,),(E5,E7,),(E6,E1,),(E6,E2,),(E6,E3,),(E6,E4,),(E6,E5,),(E6,E7,),(E7,E1,),(E7,E2,),(E7,E3,),(E7,E4,),(E7,E5,),(E7,E6,), }
 |Restricoes| = 43
 ---------------------------------------------------------------------
 =====================================================================
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-sum de 7 ch = 480
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Rafael
-sum de 7 ch = 480
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-sum de 7 ch = 420
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-sum de 7 ch = 420
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0481     30    Métodos e Técnicas de Pesquisa para Computação**   Seg 17:00-18:50 Tarcisio Rocha
-sum de 7 ch = 390
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-sum de 7 ch = 420
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Ter 17:00-18:50 Alberto Costa
-sum de 7 ch = 390
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0481     30    Métodos e Técnicas de Pesquisa para Computação**   Qua 15:00-16:50 Alberto Costa
-sum de 7 ch = 390
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0415     60    Arquitetura de Computadores                        Ter 15:00-16:50 Qui 15:00-16:50 Estombelo
-sum de 7 ch = 420
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0432     60    Processamento de Imagens                           Ter 17:00-18:50 Qui 17:00-18:50 Bruno Otavio
-sum de 7 ch = 420
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-sum de 7 ch = 420
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Sex 15:00-16:50 Estombelo
-sum de 7 ch = 390
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 VAZIA        0     Disciplina Nula                                    
-sum de 7 ch = 360
 
 Após aplicar BacktrackingSearch.apply(csp)
-2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
-2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 VAZIA        0     Disciplina Nula                                    
-2022.2 VAZIA        0     Disciplina Nula                                    
-sum de 7 ch = 360
 É Solução ? : Sim
 =====================================================================
 
- >> E1 = 2022.2 COMP0478     120   Informática                                        Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
+ >> E1 = 2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 17:00-18:50 Qua 17:00-18:50 Rene Pereira
 
 
- >> E2 = 2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
+ >> E2 = 2022.2 COMP0308     120   Atividades Complementares                          Seg 13:00-14:50 Ter 13:00-14:50 Qua 13:00-14:50 Qui 13:00-14:50 Tarcisio Rocha
 
 
- >> E3 = 2022.2 COMP0395     60    Programação Orientada a Objetos**                  Seg 15:00-16:50 Qua 15:00-16:50 Evilson
+ >> E3 = 2022.2 ESTAT0011    60    Estatística Aplicada                               Sex 15:00-16:50 Sex 17:00-18:50 Rene Pereira
 
 
- >> E4 = 2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
+ >> E4 = 2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Seg 15:00-16:50 Evilson
 
 
- >> E5 = 2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
+ >> E5 = 2022.2 VAZIA        0     Disciplina Nula                                    
 
 
  >> E6 = 2022.2 VAZIA        0     Disciplina Nula                                    

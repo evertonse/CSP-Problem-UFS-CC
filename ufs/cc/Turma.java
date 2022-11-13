@@ -9,18 +9,31 @@ public class Turma {
 	Disciplina disc;
 	Horario[] horarios;
 	String professor;
+	Horario.Turno turno;
 
 	public Turma(Disciplina disc, Horario[] horarios, String professor) {
     this.disc = disc;
     this.horarios = horarios;
     this.professor = professor;
+		this.turno = Horario.Turno.Vespestino;
 	}
 	
+	public Turma(Disciplina disc, Horario[] horarios, String professor, Horario.Turno turno) {
+		this.disc = disc;
+    this.horarios = horarios;
+    this.professor = professor;
+		this.turno = turno;
+	}
+
 	
 	static public Turma getTurmaVazia() {
 		Disciplina d = new Disciplina("VAZIA","Disciplina Nula",0,0,true,-1,Disciplina.Perfil.Basico);
 		return new Turma(d, null, "");
 	}
+
+	public Horario.Turno getTurno() {
+		return this.turno;
+	} 	
 	
 	public boolean isTurmaVazia() {
 		return this.disc.getCode().equals("VAZIA");
