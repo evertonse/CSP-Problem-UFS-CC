@@ -65,7 +65,24 @@ public class Turma {
 			"Beatriz Trinchao",
 			"Bruno Otavio",
 			"Tarcisio Rocha",
-			"Rene Pereira"
+			"Adicineia Aparecida de Oliveira",
+			"Rene Pereira",
+			"Admilson de Ribamar Lima",
+			"Breno Piva Ribeiro",
+			"Daniel Oliveira Dantas",
+			"Edward David Moreno",
+			"Edilayne Meneses Salgueiro",
+			"Giovanny Fernando Lucero",
+			"Gilton José Ferreira",
+			"Hendrik Teixeira Macedo",
+			"Glauco de Figueiredo Carneiro",
+			"Kalil Araujo Bispo",
+			"Alan Turing",
+			"Donald Knuth",
+			"Leila Maciel de Almeida",
+			"Leonardo Nogueira",
+			"Ricardo Jose Paiva",
+			"Rogerio Patricio",
 		};
 
 		Disciplina[] disciplinas = Disciplina.getAll().toArray(new Disciplina[ Disciplina.getAll().size()]);

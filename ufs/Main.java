@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 	// Deixe a variavel abaxio como 'true' para mandar printar em arquivo txt no lugar do console.
-	static final boolean SEND_TO_OUTPUT_FILE = true; 
+	static final boolean SEND_TO_OUTPUT_FILE = false; 
 	public static void main(String[] args) {
 		try {
 			if(SEND_TO_OUTPUT_FILE)

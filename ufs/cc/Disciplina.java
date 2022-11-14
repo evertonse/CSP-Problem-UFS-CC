@@ -13,7 +13,9 @@ public class Disciplina {
 		Basico, 
 		InteligenciaArtificial,
 		LinguagensDeProgramacao,
-		ProcessamentodeImagens
+		Algoritmos,
+		ProcessamentodeImagens,
+		EngSoftware
 	}
 	
 	static private List<Disciplina> all_disciplinas = null;
@@ -84,7 +86,23 @@ public class Disciplina {
 
 		disciplinas = DisciplinaRawData.getRawLinguagensDeProgramacao();
 		for (String disc : disciplinas) {
-			Disciplina new_disc = disciplinaFromString(disc,periodo,opcional,Perfil.InteligenciaArtificial);
+			Disciplina new_disc = disciplinaFromString(disc,periodo,opcional,Perfil.LinguagensDeProgramacao);
+			all_disciplinas.add(new_disc);
+		}
+		disciplinas = DisciplinaRawData.getRawComputacaoTeoricaAlgoritmos();
+		for (String disc : disciplinas) {
+			Disciplina new_disc = disciplinaFromString(disc,periodo,opcional,Perfil.Algoritmos);
+			all_disciplinas.add(new_disc);
+		}
+		disciplinas = DisciplinaRawData.getRawProcessamentoDeImagensComputacaoGrafica();
+		for (String disc : disciplinas) {
+			Disciplina new_disc = disciplinaFromString(disc,periodo,opcional,Perfil.ProcessamentodeImagens);
+			all_disciplinas.add(new_disc);
+		}
+
+		disciplinas = DisciplinaRawData.getRawEngenhariaDeSoftware();
+		for (String disc : disciplinas) {
+			Disciplina new_disc = disciplinaFromString(disc,periodo,opcional,Perfil.EngSoftware);
 			all_disciplinas.add(new_disc);
 		}
 

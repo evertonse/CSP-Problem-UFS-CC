@@ -11,6 +11,7 @@ import aima.core.search.api.CSP;
 import aima.core.search.api.Constraint;
 import aima.core.search.basic.csp.AC3;
 import aima.core.search.basic.csp.BacktrackingSearch;
+import aima.core.search.basic.csp.MinConflicts;
 import aima.core.search.basic.support.BasicCSP;
 import aima.core.search.basic.support.BasicConstraint;
 
@@ -20,7 +21,7 @@ import ufs.cc.Estudante;
 import ufs.cc.Horario;
 
 public class TurmasCSP {
-
+//>> TURMA CSP ---------------------------------------------
 public static void run() {
 	final int N_TURMAS_PARA_ESCOLHA	= 7;
 	final int N_TURMAS_ORFERTADAS		= 45;
@@ -77,15 +78,12 @@ public static void run() {
 	Constraint[] restrictions = getConstraints(variables,e, CARGA_HORARIO_MAXIMA,CARGA_HORARIO_MINIMA_PPC);
 
 	CSP csp = new BasicCSP( variables, domains, restrictions);
-	printCSP(csp);
-	AC3 ac3 = new AC3();
-	ac3.test(csp);
-
-	System.out.println("Após aplicas AC3");
-	printCSP(csp);
-	System.out.println("=====================================================================");
+	//AC3 ac3 = new AC3();
+	//ac3.test(csp);
 	
-	BacktrackingSearch search = new BacktrackingSearch();
+	SearchForAssignmentFunction search = new BacktrackingSearch();
+	// CASO queria fazer local search descomente abaixo
+	//SearchForAssignmentFunction search = new MinConflicts();
 	Assignment assignment = search.apply(csp);
 	
 	System.out.println("\nApós aplicar BacktrackingSearch.apply(csp)");
@@ -116,6 +114,8 @@ public static void run() {
 	System.out.println("=====================================================================");
 	//------------------------------------------------------------------------------------------
 }
+
+
 
 static public Object[][] getDomains(int variables_length,int n_turmas, Estudante e){
 	
