@@ -24,7 +24,7 @@ public class TurmasCSP {
 //>> TURMA CSP ---------------------------------------------
 public static void run() {
 	final int N_TURMAS_PARA_ESCOLHA	= 7;
-	final int N_TURMAS_ORFERTADAS		= 45;
+	final int N_TURMAS_ORFERTADAS		= 50;
 
 	final int CARGA_HORARIO_MAXIMA_PPC	= 480;
 	final int CARGA_HORARIO_MINIMA_PPC	= 240;
@@ -120,7 +120,7 @@ public static void run() {
 static public Object[][] getDomains(int variables_length,int n_turmas, Estudante e){
 	
 	Turma[] all_turmas = Turma.getOfertas(n_turmas,e.turno); // 25 turmas no horario 1 (vespertino)
-	System.out.println("\n>> Turmas Ofertadas:");
+	System.out.println("\n>> " + all_turmas.length +" Turmas Ofertadas:");
 	for(Turma t: all_turmas) {
 		System.out.println(t);
 	}

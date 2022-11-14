@@ -87,7 +87,40 @@ public class Turma {
 
 		Disciplina[] disciplinas = Disciplina.getAll().toArray(new Disciplina[ Disciplina.getAll().size()]);
 		
-		for (int i = 0; i < n_turmas; i++) {
+		turmas.add(
+			new Turma(Disciplina.disciplinaFromCode("MAT0153"), 
+			new Horario[] {
+				new Horario(turno, 0, 1),
+				new Horario(turno, 2, 1)
+			}, 
+			"Carl Friedrich Gauss"));
+		
+		turmas.add(
+			new Turma(Disciplina.disciplinaFromCode("MAT0153"), 
+			new Horario[] {
+				new Horario(turno, 4, 1),
+				new Horario(turno, 4, 2)
+			}, 
+			"Carl Friedrich Gauss"));
+		
+			turmas.add(
+			new Turma(Disciplina.disciplinaFromCode("COMP0395"), 
+			new Horario[] {
+				new Horario(turno, 1, 2),
+				new Horario(turno, 3, 2)
+			}, 
+
+			"Bjarne Stroustrup"));
+			
+			turmas.add(
+			new Turma(Disciplina.disciplinaFromCode("COMP0395"), 
+			new Horario[] {
+				new Horario(turno, 4, 3),
+				new Horario(turno, 4, 4)
+			}, 
+			"Bjarne Stroustrup"));
+		int added_manually = turmas.size();
+		for (int i = 0; i < n_turmas - added_manually ; i++) {
 			int prof 	= rd.nextInt(professores.length);
 			int disc 	= rd.nextInt(disciplinas.length);
 			int hora 	= rd.nextInt(3);
@@ -156,6 +189,7 @@ public class Turma {
 				}
 			}
 		}
+
 		return turmas.toArray(new Turma[turmas.size()]);
 	}
 
