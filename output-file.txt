@@ -2,73 +2,76 @@
 
 >>Aluno: 
 PIBIC:true ESTAGIO:false PIBITI:false
-Horas Diarias Disponiveis para Estudar = 9,799999
-Horas de Estudo Diario (incluso horario de aula + estudo fora de aula) por Carga Horária = 0,113333
+Horas Diarias Disponiveis para Estudar = 10,000000
+Horas de Estudo Diario (incluso horario de aula + estudo fora de aula) por Carga Horária = 0,133333
 <<
 
-CARGA_HORARIO_MAXIMA_DO_ALUNO = 432
+CARGA_HORARIO_MAXIMA_DO_ALUNO = 375
 CARGA_HORARIO_MAXIMA_PPC = 480
 
 >> Turmas Ofertadas:
-2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Sex 15:00-16:50 Alberto Costa
-2022.2 COMP0439     60    Engenharia de Software II                          Ter 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 COMP0405     60    Estruturas de Dados**                              Sex 15:00-16:50 Sex 17:00-18:50 Estombelo
-2022.2 MAT0151      60    Cálculo A                                          Seg 13:00-14:50 Qua 13:00-14:50 Evilson
-2022.2 COMP0483     180   Prática Orientada em Computação I*                 Seg 13:00-14:50 Ter 13:00-14:50 Beatriz Trinchao
-2022.2 MAT0152      60    Cálculo B                                          Sex 15:00-16:50 Sex 17:00-18:50 Rafael
+2022.2 FISI0264     60    Laboratório de Física1*                            Seg 13:00-14:50 Qua 13:00-14:50 Estombelo
+2022.2 COMP0424     60    Aprendizagem de Máquina                            Seg 15:00-16:50 Qua 15:00-16:50 Leonardo Nogueira
+2022.2 COMP0480     30    Seminários em Computação                           Ter 13:00-14:50 Beatriz Trinchao
+2022.2 COMP0308     120   Atividades Complementares                          Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Leonardo Nogueira
+2022.2 COMP0438     60    Engenharia de Software I                           Ter 15:00-16:50 Qui 15:00-16:50 Rene Pereira
+2022.2 COMP0424     60    Aprendizagem de Máquina                            Ter 17:00-18:50 Qui 17:00-18:50 Rafael
+2022.2 COMP0334     60    Programação Imperativa**                           Sex 15:00-16:50 Sex 17:00-18:50 Leonardo Nogueira
+2022.2 COMP0455     60    Banco de Dados I                                   Ter 15:00-16:50 Qui 15:00-16:50 Beatriz Trinchao
+2022.2 COMP0334     60    Programação Imperativa**                           Sex 15:00-16:50 Sex 17:00-18:50 Estombelo
+2022.2 COMP0472     60    Sistemas Operacionais                              Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
+2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Evilson
+2022.2 COMP0472     60    Sistemas Operacionais                              Ter 17:00-18:50 Qui 17:00-18:50 Rene Pereira
 2022.2 COMP0485     120   Trabalho de Conclusão de Curso I                   Seg 13:00-14:50 Ter 13:00-14:50 Qua 13:00-14:50 Qui 13:00-14:50 Alberto Costa
-2022.2 COMP0405     60    Estruturas de Dados**                              Seg 13:00-14:50 Qua 13:00-14:50 Alberto Costa
-2022.2 COMP0427     60    Inteligência Artificial                            Seg 17:00-18:50 Qua 17:00-18:50 Beatriz Trinchao
-2022.2 MAT0151      60    Cálculo A                                          Seg 17:00-18:50 Qua 17:00-18:50 Beatriz Trinchao
-2022.2 COMP0392     60    Paradigmas de Linguagens de Programação            Ter 17:00-18:50 Qui 17:00-18:50 Evilson
-2022.2 COMP0392     60    Paradigmas de Linguagens de Programação            Sex 15:00-16:50 Sex 17:00-18:50 Estombelo
-2022.2 COMP0455     60    Banco de Dados I                                   Ter 15:00-16:50 Qui 15:00-16:50 Tarcisio Rocha
-2022.2 COMP0439     60    Engenharia de Software II                          Sex 15:00-16:50 Sex 17:00-18:50 Leonardo Nogueira
-2022.2 FISI0260     60    Física 1                                           Sex 15:00-16:50 Sex 17:00-18:50 Evilson
-2022.2 COMP0478     60    Informática Ética e Sociedade                      Ter 17:00-18:50 Qui 17:00-18:50 Rafael
-2022.2 COMP0481     30    Métodos e Técnicas de Pesquisa para Computação**   Qui 17:00-18:50 Alberto Costa
-2022.2 MAT0057      60    Fundamentos Elementares dade Matemática            Sex 15:00-16:50 Sex 17:00-18:50 Bruno Otavio
-2022.2 COMP0439     60    Engenharia de Software II                          Sex 15:00-16:50 Sex 17:00-18:50 Evilson
-2022.2 COMP0423     60    Aplicações de Inteligência Artificial              Sex 15:00-16:50 Sex 17:00-18:50 Estombelo
-2022.2 COMP0424     60    Aprendizagem de Máquina                            Sex 15:00-16:50 Sex 17:00-18:50 Rafael
-2022.2 COMP0391     60    Compiladores                                       Ter 13:00-14:50 Qui 13:00-14:50 Rene Pereira
-2022.2 COMP0423     60    Aplicações de Inteligência Artificial              Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
-2022.2 COMP0438     60    Engenharia de Software I                           Seg 15:00-16:50 Qua 15:00-16:50 Bruno Otavio
-2022.2 MAT0057      60    Fundamentos Elementares dade Matemática            Seg 17:00-18:50 Qua 17:00-18:50 Rene Pereira
-2022.2 COMP0438     60    Engenharia de Software I                           Seg 17:00-18:50 Qua 17:00-18:50 Rafael
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Leonardo Nogueira
-2022.2 COMP0391     60    Compiladores                                       Ter 13:00-14:50 Qui 13:00-14:50 Tarcisio Rocha
-2022.2 COMP0463     60    Laboratório de Redes de Computadores*              Sex 15:00-16:50 Sex 17:00-18:50 Bruno Otavio
-2022.2 COMP0463     60    Laboratório de Redes de Computadores*              Seg 15:00-16:50 Qua 15:00-16:50 Alberto Costa
-2022.2 COMP0308     120   Atividades Complementares                          Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Rafael
-2022.2 COMP0408     60    Grafos e Algoritmos Computacionais**               Sex 15:00-16:50 Sex 17:00-18:50 Tarcisio Rocha
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Bruno Otavio
-2022.2 COMP0412     60    Projeto e Análise de Algoritmos**                  Sex 15:00-16:50 Sex 17:00-18:50 Rafael
-2022.2 COMP0483     180   Prática Orientada em Computação I*                 Qui 15:00-16:50 Sex 15:00-16:50 Estombelo
-2022.2 FISI0260     60    Física 1                                           Ter 13:00-14:50 Qui 13:00-14:50 Leonardo Nogueira
-2022.2 COMP0470     60    Sistemas Distribuídos                              Sex 15:00-16:50 Sex 17:00-18:50 Bruno Otavio
-2022.2 COMP0438     60    Engenharia de Software I                           Seg 15:00-16:50 Qua 15:00-16:50 Rene Pereira
-2022.2 COMP0455     60    Banco de Dados I                                   Seg 13:00-14:50 Qua 13:00-14:50 Tarcisio Rocha
-2022.2 MAT0153      60    Cálculo C                                          Ter 17:00-18:50 Qui 17:00-18:50 Rene Pereira
-2022.2 COMP0478     60    Informática Ética e Sociedade                      Sex 15:00-16:50 Sex 17:00-18:50 Bruno Otavio
-2022.2 COMP0308     120   Atividades Complementares                          Seg 13:00-14:50 Ter 13:00-14:50 Qua 13:00-14:50 Qui 13:00-14:50 Leonardo Nogueira
-2022.2 FISI0260     60    Física 1                                           Seg 13:00-14:50 Qua 13:00-14:50 Rafael
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
-2022.2 COMP0439     60    Engenharia de Software II                          Sex 15:00-16:50 Sex 17:00-18:50 Evilson
+2022.2 COMP0484     120   Prática Orientada em Computação II *               Seg 13:00-14:50 Ter 13:00-14:50 Qua 13:00-14:50 Qui 13:00-14:50 Beatriz Trinchao
+2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Sex 15:00-16:50 Rafael
+2022.2 COMP0485     120   Trabalho de Conclusão de Curso I                   Seg 13:00-14:50 Ter 13:00-14:50 Qua 13:00-14:50 Qui 13:00-14:50 Rene Pereira
+2022.2 COMP0439     60    Engenharia de Software II                          Ter 13:00-14:50 Qui 13:00-14:50 Alberto Costa
+2022.2 COMP0443     60    Interface Humano Computador                        Ter 13:00-14:50 Qui 13:00-14:50 Rafael
+2022.2 COMP0409     60    Linguagens Formais e Computabilidade               Ter 13:00-14:50 Qui 13:00-14:50 Alberto Costa
+2022.2 COMP0427     60    Inteligência Artificial                            Ter 17:00-18:50 Qui 17:00-18:50 Rene Pereira
+2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Rafael
+2022.2 COMP0398     60    Programação para Web**                             Sex 15:00-16:50 Sex 17:00-18:50 Alberto Costa
+2022.2 COMP0397     60    Programação Paralela e Concorrente**               Sex 15:00-16:50 Sex 17:00-18:50 Evilson
+2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Qua 17:00-18:50 Rene Pereira
+2022.2 COMP0405     60    Estruturas de Dados**                              Sex 15:00-16:50 Sex 17:00-18:50 Rene Pereira
+2022.2 FISI0260     60    Física 1                                           Ter 15:00-16:50 Qui 15:00-16:50 Bruno Otavio
+2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Sex 15:00-16:50 Sex 17:00-18:50 Rafael
+2022.2 COMP0455     60    Banco de Dados I                                   Sex 15:00-16:50 Sex 17:00-18:50 Bruno Otavio
+2022.2 COMP0484     120   Prática Orientada em Computação II *               Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Leonardo Nogueira
+2022.2 COMP0308     120   Atividades Complementares                          Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Rene Pereira
+2022.2 COMP0483     180   Prática Orientada em Computação I*                 Ter 17:00-18:50 Qua 17:00-18:50 Leonardo Nogueira
+2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 13:00-14:50 Qui 13:00-14:50 Rene Pereira
+2022.2 COMP0455     60    Banco de Dados I                                   Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
+2022.2 FISI0260     60    Física 1                                           Seg 13:00-14:50 Qua 13:00-14:50 Tarcisio Rocha
+2022.2 COMP0308     120   Atividades Complementares                          Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Tarcisio Rocha
+2022.2 COMP0463     60    Laboratório de Redes de Computadores*              Ter 17:00-18:50 Qui 17:00-18:50 Evilson
+2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Rafael
+2022.2 COMP0393     60    Programação Funcional**                            Seg 13:00-14:50 Qua 13:00-14:50 Bruno Otavio
+2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Seg 17:00-18:50 Evilson
+2022.2 MAT0057      60    Fundamentos Elementares dade Matemática            Ter 15:00-16:50 Qui 15:00-16:50 Estombelo
+2022.2 COMP0483     180   Prática Orientada em Computação I*                 Qua 17:00-18:50 Qui 17:00-18:50 Rafael
+2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 13:00-14:50 Qui 13:00-14:50 Estombelo
+2022.2 COMP0484     120   Prática Orientada em Computação II *               Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Rafael
+2022.2 COMP0415     60    Arquitetura de Computadores                        Seg 15:00-16:50 Qua 15:00-16:50 Rafael
+2022.2 COMP0424     60    Aprendizagem de Máquina                            Seg 13:00-14:50 Qua 13:00-14:50 Rene Pereira
 
 >> Turmas Possiveis para o aluno:  considerando (pre-requisito e nao repetir turma já cursada):
-2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Sex 15:00-16:50 Alberto Costa
-2022.2 COMP0405     60    Estruturas de Dados**                              Sex 15:00-16:50 Sex 17:00-18:50 Estombelo
-2022.2 COMP0405     60    Estruturas de Dados**                              Seg 13:00-14:50 Qua 13:00-14:50 Alberto Costa
-2022.2 COMP0478     60    Informática Ética e Sociedade                      Ter 17:00-18:50 Qui 17:00-18:50 Rafael
-2022.2 COMP0481     30    Métodos e Técnicas de Pesquisa para Computação**   Qui 17:00-18:50 Alberto Costa
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Leonardo Nogueira
-2022.2 COMP0308     120   Atividades Complementares                          Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Rafael
-2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Bruno Otavio
-2022.2 MAT0153      60    Cálculo C                                          Ter 17:00-18:50 Qui 17:00-18:50 Rene Pereira
-2022.2 COMP0478     60    Informática Ética e Sociedade                      Sex 15:00-16:50 Sex 17:00-18:50 Bruno Otavio
-2022.2 COMP0308     120   Atividades Complementares                          Seg 13:00-14:50 Ter 13:00-14:50 Qua 13:00-14:50 Qui 13:00-14:50 Leonardo Nogueira
-2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 17:00-18:50 Qui 17:00-18:50 Tarcisio Rocha
+2022.2 COMP0308     120   Atividades Complementares                          Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Leonardo Nogueira
+2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Evilson
+2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Sex 15:00-16:50 Rafael
+2022.2 COMP0409     60    Linguagens Formais e Computabilidade               Ter 13:00-14:50 Qui 13:00-14:50 Alberto Costa
+2022.2 COMP0432     60    Processamento de Imagens                           Sex 15:00-16:50 Sex 17:00-18:50 Rafael
+2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Qua 17:00-18:50 Rene Pereira
+2022.2 COMP0405     60    Estruturas de Dados**                              Sex 15:00-16:50 Sex 17:00-18:50 Rene Pereira
+2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Sex 15:00-16:50 Sex 17:00-18:50 Rafael
+2022.2 COMP0308     120   Atividades Complementares                          Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Rene Pereira
+2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 13:00-14:50 Qui 13:00-14:50 Rene Pereira
+2022.2 COMP0308     120   Atividades Complementares                          Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Tarcisio Rocha
+2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Rafael
+2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Seg 17:00-18:50 Evilson
+2022.2 COMP0419     60    Prática em Sistemas Digitais*                      Ter 13:00-14:50 Qui 13:00-14:50 Estombelo
+2022.2 COMP0415     60    Arquitetura de Computadores                        Seg 15:00-16:50 Qua 15:00-16:50 Rafael
 2022.2 VAZIA        0     Disciplina Nula                                    
 <<
 
@@ -91,54 +94,56 @@ COMP0334     60    Programação Imperativa**
 ---------------------------------------------------------------------
 Variaveis : [E1, E2, E3, E4, E5, E6, E7]
 |Dominios| = 7
-|Dominios[0]| = 13
-|Dominios[1]| = 13
-|Dominios[2]| = 13
-|Dominios[3]| = 13
-|Dominios[4]| = 13
-|Dominios[5]| = 13
-|Dominios[6]| = 13
-Tuplas da Relacao de Restricao = {(E1,E2,E3,E4,E5,E6,E7,),(E1,E2,),(E1,E3,),(E1,E4,),(E1,E5,),(E1,E6,),(E1,E7,),(E2,E1,),(E2,E3,),(E2,E4,),(E2,E5,),(E2,E6,),(E2,E7,),(E3,E1,),(E3,E2,),(E3,E4,),(E3,E5,),(E3,E6,),(E3,E7,),(E4,E1,),(E4,E2,),(E4,E3,),(E4,E5,),(E4,E6,),(E4,E7,),(E5,E1,),(E5,E2,),(E5,E3,),(E5,E4,),(E5,E6,),(E5,E7,),(E6,E1,),(E6,E2,),(E6,E3,),(E6,E4,),(E6,E5,),(E6,E7,),(E7,E1,),(E7,E2,),(E7,E3,),(E7,E4,),(E7,E5,),(E7,E6,), }
-|Restricoes| = 43
+|Dominios[0]| = 16
+|Dominios[1]| = 16
+|Dominios[2]| = 16
+|Dominios[3]| = 16
+|Dominios[4]| = 16
+|Dominios[5]| = 16
+|Dominios[6]| = 16
+Tuplas da Relacao de Restricao = {(E1,E2,E3,E4,E5,E6,E7,),(E1,E2,E3,E4,E5,E6,E7,),(E1,E2,E3,E4,E5,E6,E7,),(E1,E2,),(E1,E3,),(E1,E4,),(E1,E5,),(E1,E6,),(E1,E7,),(E2,E1,),(E2,E3,),(E2,E4,),(E2,E5,),(E2,E6,),(E2,E7,),(E3,E1,),(E3,E2,),(E3,E4,),(E3,E5,),(E3,E6,),(E3,E7,),(E4,E1,),(E4,E2,),(E4,E3,),(E4,E5,),(E4,E6,),(E4,E7,),(E5,E1,),(E5,E2,),(E5,E3,),(E5,E4,),(E5,E6,),(E5,E7,),(E6,E1,),(E6,E2,),(E6,E3,),(E6,E4,),(E6,E5,),(E6,E7,),(E7,E1,),(E7,E2,),(E7,E3,),(E7,E4,),(E7,E5,),(E7,E6,), }
+|Restricoes| = 45
 ---------------------------------------------------------------------
-Após aplicas AC3.test()
+Após aplicas AC3
 
 ---------------------------------------------------------------------
 Variaveis : [E1, E2, E3, E4, E5, E6, E7]
 |Dominios| = 7
-|Dominios[0]| = 13
-|Dominios[1]| = 13
-|Dominios[2]| = 13
-|Dominios[3]| = 13
-|Dominios[4]| = 13
-|Dominios[5]| = 13
-|Dominios[6]| = 13
-Tuplas da Relacao de Restricao = {(E1,E2,E3,E4,E5,E6,E7,),(E1,E2,),(E1,E3,),(E1,E4,),(E1,E5,),(E1,E6,),(E1,E7,),(E2,E1,),(E2,E3,),(E2,E4,),(E2,E5,),(E2,E6,),(E2,E7,),(E3,E1,),(E3,E2,),(E3,E4,),(E3,E5,),(E3,E6,),(E3,E7,),(E4,E1,),(E4,E2,),(E4,E3,),(E4,E5,),(E4,E6,),(E4,E7,),(E5,E1,),(E5,E2,),(E5,E3,),(E5,E4,),(E5,E6,),(E5,E7,),(E6,E1,),(E6,E2,),(E6,E3,),(E6,E4,),(E6,E5,),(E6,E7,),(E7,E1,),(E7,E2,),(E7,E3,),(E7,E4,),(E7,E5,),(E7,E6,), }
-|Restricoes| = 43
+|Dominios[0]| = 16
+|Dominios[1]| = 16
+|Dominios[2]| = 16
+|Dominios[3]| = 16
+|Dominios[4]| = 16
+|Dominios[5]| = 16
+|Dominios[6]| = 16
+Tuplas da Relacao de Restricao = {(E1,E2,E3,E4,E5,E6,E7,),(E1,E2,E3,E4,E5,E6,E7,),(E1,E2,E3,E4,E5,E6,E7,),(E1,E2,),(E1,E3,),(E1,E4,),(E1,E5,),(E1,E6,),(E1,E7,),(E2,E1,),(E2,E3,),(E2,E4,),(E2,E5,),(E2,E6,),(E2,E7,),(E3,E1,),(E3,E2,),(E3,E4,),(E3,E5,),(E3,E6,),(E3,E7,),(E4,E1,),(E4,E2,),(E4,E3,),(E4,E5,),(E4,E6,),(E4,E7,),(E5,E1,),(E5,E2,),(E5,E3,),(E5,E4,),(E5,E6,),(E5,E7,),(E6,E1,),(E6,E2,),(E6,E3,),(E6,E4,),(E6,E5,),(E6,E7,),(E7,E1,),(E7,E2,),(E7,E3,),(E7,E4,),(E7,E5,),(E7,E6,), }
+|Restricoes| = 45
 ---------------------------------------------------------------------
 =====================================================================
 
 Após aplicar BacktrackingSearch.apply(csp)
 É Solução ? : Sim
 =====================================================================
+Atribuicoes Encontradas
 
- >> E1 = 2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Sex 15:00-16:50 Alberto Costa
+>> E1 = 2022.2 COMP0308     120   Atividades Complementares                          Seg 17:00-18:50 Ter 17:00-18:50 Qua 17:00-18:50 Qui 17:00-18:50 Leonardo Nogueira
+>> E1.Perfil = Basico; E1.Departamento = DCOMP
 
+>> E2 = 2022.2 MAT0153      60    Cálculo C                                          Seg 13:00-14:50 Qua 13:00-14:50 Evilson
+>> E2.Perfil = Basico; E2.Departamento = DMA
 
- >> E2 = 2022.2 COMP0405     60    Estruturas de Dados**                              Seg 13:00-14:50 Qua 13:00-14:50 Alberto Costa
+>> E3 = 2022.2 COMP0417     30    Fundamentos de Sistemas Embarcados                 Sex 15:00-16:50 Rafael
+>> E3.Perfil = Basico; E3.Departamento = DCOMP
 
+>> E4 = 2022.2 COMP0409     60    Linguagens Formais e Computabilidade               Ter 13:00-14:50 Qui 13:00-14:50 Alberto Costa
+>> E4.Perfil = Basico; E4.Departamento = DCOMP
 
- >> E3 = 2022.2 COMP0478     60    Informática Ética e Sociedade                      Ter 17:00-18:50 Qui 17:00-18:50 Rafael
+>> E5 = 2022.2 COMP0415     60    Arquitetura de Computadores                        Seg 15:00-16:50 Qua 15:00-16:50 Rafael
+>> E5.Perfil = Basico; E5.Departamento = DCOMP
 
+>> E6 = 2022.2 VAZIA        0     Disciplina Nula                                    
+>> E6.Perfil = Basico; E6.Departamento = 
 
- >> E4 = 2022.2 COMP0308     120   Atividades Complementares                          Seg 15:00-16:50 Ter 15:00-16:50 Qua 15:00-16:50 Qui 15:00-16:50 Rafael
-
-
- >> E5 = 2022.2 VAZIA        0     Disciplina Nula                                    
-
-
- >> E6 = 2022.2 VAZIA        0     Disciplina Nula                                    
-
-
- >> E7 = 2022.2 VAZIA        0     Disciplina Nula                                    
-
+>> E7 = 2022.2 VAZIA        0     Disciplina Nula                                    
+>> E7.Perfil = Basico; E7.Departamento = 
+=====================================================================

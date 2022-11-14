@@ -9,10 +9,11 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class Disciplina {
-	enum Perfil { 
+	public enum Perfil { 
 		Basico, 
 		InteligenciaArtificial,
-		LinguagensDeProgramacao
+		LinguagensDeProgramacao,
+		ProcessamentodeImagens
 	}
 	
 	static private List<Disciplina> all_disciplinas = null;
@@ -27,7 +28,7 @@ public class Disciplina {
 	// Tecnológica, Basica
 	String departametno, area_de_formacao;
 	//Perfil de Inteligência Artificial
-	Perfil perfil;
+	public Perfil perfil;
 	boolean optional;
 
 	public Disciplina(
@@ -123,7 +124,7 @@ public class Disciplina {
 		
 		for (String pr : pre_reqs_raw) {
 			if (pr.contains("PRO")) {
-				disc.addPreReq(pr.replace("(PRO)", ""));
+				disc.addPreReq(pr.replace("(PRO)", "").strip());
 			}
 		}
 		Disciplina.code_to_disc.put(disc.code, disc);
@@ -187,6 +188,22 @@ public class Disciplina {
 	
 	public String getCode() {
 		return this.code;
+	}
+
+	public String getDepartamentoCode() {
+		String dept_code = this.code.replaceAll("\\d", "");
+		switch (dept_code) {
+			case "COMP":
+				return "DCOMP";
+			case "MAT":
+				return "DMA";
+			case "FISI":
+				return "DFI";
+			case "ESTAT":
+				return "DECAT";
+			default:
+				return "";
+		}
 	}
 	
 	@Override

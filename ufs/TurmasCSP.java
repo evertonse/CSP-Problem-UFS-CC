@@ -6,6 +6,7 @@ import java.util.Map;
 
 import aima.core.search.api.Assignment;
 import aima.core.search.api.Domain;
+import aima.core.search.api.SearchForAssignmentFunction;
 import aima.core.search.api.CSP;
 import aima.core.search.api.Constraint;
 import aima.core.search.basic.csp.AC3;
@@ -20,7 +21,6 @@ import ufs.cc.Horario;
 
 public class TurmasCSP {
 
-// assembly of a car
 public static void run() {
 	final int N_TURMAS_PARA_ESCOLHA	= 7;
 	final int N_TURMAS_ORFERTADAS		= 45;
@@ -57,10 +57,10 @@ public static void run() {
 		PIBIC,PIBITI,ESTAGIO
 	);
 	
-	// Meira hora extra de estudo a caga 15 horas de carga horaria
-	e.setHorasSemanaisExtraPorCargaHoraria(0.7f,15.0f);
-	e.setHorasDeViagemIda(1.1f);
-	e.setHorasDeViagemVolta(1.1f);
+	// 1 hora extra de estudo semanal a caga 15 horas de carga horaria
+	e.setHorasSemanaisExtraPorCargaHoraria(1.f,15.0f);
+	e.setHorasDeViagemIda(1.0f);
+	e.setHorasDeViagemVolta(1.0f);
 
 	System.out.println(e + "\n");
 	
@@ -81,7 +81,7 @@ public static void run() {
 	AC3 ac3 = new AC3();
 	ac3.test(csp);
 
-	System.out.println("Após aplicas AC3.test()");
+	System.out.println("Após aplicas AC3");
 	printCSP(csp);
 	System.out.println("=====================================================================");
 	
@@ -96,14 +96,24 @@ public static void run() {
 		return;
 	}
 
-	System.out.println("É Solução ? : " + (assignment.isSolution(csp) ? "Sim" : "Não"));
-	//printCSP(csp);
+	System.out.println("É Solucao ? : " + (assignment.isSolution(csp) ? "Sim" : "Não"));
 	
 	Map<String,Object> assignment_map = assignment.getAssignments();
+	int ch_total  = 0;
 	System.out.println("=====================================================================");
-		for (Map.Entry<String, Object> entry : assignment_map.entrySet()) {
-			System.out.println("\n >> " + entry.getKey() + " = " + (Turma)entry.getValue() + "\n");
+	System.out.println("Atribuicoes Encontradas");
+	for (Map.Entry<String, Object> entry : assignment_map.entrySet()) {
+		System.out.println("\n>> " + entry.getKey() + " = " + (Turma)entry.getValue());
+		System.out.println(">> " + entry.getKey() + ".Perfil = " + 
+		((Turma)entry.getValue()).getDisciplina().perfil + "; " +
+		entry.getKey() + ".Departamento = " + 
+		((Turma)entry.getValue()).getDisciplina().getDepartamentoCode()
+		);
+		ch_total  += ((Turma)entry.getValue()).getDisciplina().getCargaHoraria();
 	}
+	System.out.println("Carga Horario Total dessa Solucao = " + ch_total);
+
+	System.out.println("=====================================================================");
 	//------------------------------------------------------------------------------------------
 }
 
@@ -178,6 +188,41 @@ static public String[] getVariables(int n_turmas){
 static public Constraint[] getConstraints(String[] variables, Estudante estudante, int ch_max, int ch_min){
 	List<Constraint> restrictions = new ArrayList<>(25);
 
+	Constraint dma_constraint = new BasicConstraint(
+		variables,
+		(vals) -> {
+			
+			for (Object val : vals) {
+				boolean dma_exist = ((Turma) val).getDisciplina().getDepartamentoCode().equals("DMA");
+				if (dma_exist){
+					return true;
+				}
+			}
+			return false;
+		}
+	);
+	restrictions.add(dma_constraint);
+	
+	Constraint duas_perfil_basico = new BasicConstraint(
+		variables,
+		(vals) -> {
+			int basico = 0;
+			for (Object val : vals) {
+				boolean is_basico = ((Turma) val).getDisciplina().perfil == Disciplina.Perfil.Basico;
+				if (is_basico){
+					basico += 1;
+				}
+			}
+			if (basico > 2) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	);
+	restrictions.add(duas_perfil_basico);
+
 	Constraint min_max_carga_horario = new BasicConstraint(
 		variables,
 		(vals) -> {
@@ -187,7 +232,7 @@ static public Constraint[] getConstraints(String[] variables, Estudante estudant
 				sum += ((Turma) val).getDisciplina().getCargaHoraria();
 			}
 			
-			if (sum >= 240 && ch_min <= ch_max){
+			if (sum >= ch_min && sum <= ch_max){
 				return true;
 			} 
 			else{
