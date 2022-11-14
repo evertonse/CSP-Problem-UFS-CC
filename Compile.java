@@ -21,7 +21,7 @@ public class Compile {
 		" -sourcepath " + root_path  + 
 		" -d " + Compile.classpath + 
 		" @" + argsfilename;
-	static String cmd_run 		 = "java -cp " + Compile.classpath + " Main";
+	static String cmd_run 		 = "java -cp " + Compile.classpath + " ufs.Main";
 
 	static ArrayList<String> javafiles = new ArrayList<String>(25);
 

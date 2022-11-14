@@ -88,9 +88,9 @@ public class Turma {
 		Disciplina[] disciplinas = Disciplina.getAll().toArray(new Disciplina[ Disciplina.getAll().size()]);
 		
 		for (int i = 0; i < n_turmas; i++) {
-			int prof 	= rd.nextInt(0, professores.length);
-			int disc 	= rd.nextInt(0, disciplinas.length);
-			int hora 	= rd.nextInt(0,3);
+			int prof 	= rd.nextInt(professores.length);
+			int disc 	= rd.nextInt(disciplinas.length);
+			int hora 	= rd.nextInt(3);
 			int cr 		= disciplinas[disc].getCreditos();
 			Horario[] horarios;
 			
@@ -106,7 +106,7 @@ public class Turma {
 			else if (cr == 4) { 
 				horarios = new Horario[2];
 				
-				int dia = rd.nextInt(0,3);
+				int dia = rd.nextInt(3);
 				// tudo na sexta
 				if (dia == 2 ){
 					horarios[0] = new Horario(turno, 4,1);
@@ -136,7 +136,7 @@ public class Turma {
 			// Deve segunda-qua-sex
 			else if (cr == 12) { 
 				horarios = new Horario[2];
-				int dia = rd.nextInt(0,4);
+				int dia = rd.nextInt(4);
 				
 				horarios[0] = new Horario(turno, dia, hora);
 				horarios[1] = new Horario(turno, dia+1, hora);

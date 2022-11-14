@@ -142,7 +142,7 @@ public class Disciplina {
 		
 		for (String pr : pre_reqs_raw) {
 			if (pr.contains("PRO")) {
-				disc.addPreReq(pr.replace("(PRO)", "").strip());
+				disc.addPreReq(pr.replace("(PRO)", ""));
 			}
 		}
 		Disciplina.code_to_disc.put(disc.code, disc);
