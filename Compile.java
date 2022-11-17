@@ -18,7 +18,8 @@ public class Compile {
 
 	static String cmd_compile  = 
 		"javac -cp " +  Compile.classpath + 
-		" -sourcepath " + root_path  + 
+		" -sourcepath " + root_path  +
+		" -encoding UTF-8" + 
 		" -d " + Compile.classpath + 
 		" @" + argsfilename;
 	static String cmd_run 		 = "java -cp " + Compile.classpath + " ufs.Main";

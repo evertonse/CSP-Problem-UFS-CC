@@ -24,7 +24,7 @@ public class TurmasCSP {
 //>> TURMA CSP ---------------------------------------------
 public static void run() {
 	final int N_TURMAS_PARA_ESCOLHA	= 7;
-	final int N_TURMAS_ORFERTADAS		= 50;
+	final int N_TURMAS_ORFERTADAS		= 15;
 
 	final int CARGA_HORARIO_MAXIMA_PPC	= 480;
 	final int CARGA_HORARIO_MINIMA_PPC	= 240;
@@ -49,8 +49,8 @@ public static void run() {
 
 	boolean 
 		PIBIC 	= true,
-		ESTAGIO = false,
-		PIBITI 	= false;
+		ESTAGIO = true,
+		PIBITI 	= true;
 	
 	Estudante e = new Estudante(
 		disciplinas_cursadas,

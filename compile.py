@@ -8,6 +8,8 @@ jarfiles  :list = [y.replace('\\','/') for x in os.walk("./") for y in glob(os.p
 
 classpath    :str = "./build/" 
 argsfilename :str	= "javafiles.args"
+cmd_compile :str = f'javac -classpath  {classpath} -sourcepath "./" -d "{classpath}" -encoding UTF-8 ' + f"@{argsfilename}"
+cmd_run     :str = f'java -cp "{classpath}" ufs.Main'
 
 # Adiciona a lista de arquivos para compilar
 # apenas se o path do arquivo não contem os folders 
@@ -18,12 +20,10 @@ with open( argsfilename, 'w+' ) as f:
 			continue
 		f.write(f"{j} \n")
 
-cmd_compile :str = f'javac -classpath {classpath} -sourcepath "./" -d "{classpath}" ' + f"@{argsfilename}"
 print(cmd_compile)
 code:int = os.system(cmd_compile)
 
 if (code == 0):
-	cmd_run     :str = f'java -cp "{classpath}" ufs.Main'
 	print(cmd_run)
 	code:int = os.system(cmd_run)	
 
